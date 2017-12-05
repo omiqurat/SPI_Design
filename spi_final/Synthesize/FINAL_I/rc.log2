@@ -1,0 +1,171 @@
+Checking out license 'RTL_Compiler_Ultra'... (0 seconds elapsed)
+Reading GUI preferences file '/fibus/fs3/18/c00cds01/.cadence/rc.gui'.
+
+                                                                      Cadence Encounter(R) RTL Compiler
+                                                              Version v11.20-s017_1 (64-bit), built Jul 19 2012
+
+
+Copyright notice: Copyright 1997-2012 Cadence Design Systems, Inc. All rights reserved worldwide. 
+
+Patent notices: Protected by U.S. Patents: 5892687; 6470486; 6772398; 6772399; 6807651; 6832357; 7007247; 8127260 
+
+WARNING: This version of RC is 1460 days old.
+         Visit downloads.cadence.com for the latest release of RC.
+
+
+=============================================================================================================================================================================
+                                                                Welcome to Cadence Encounter(R) RTL Compiler
+
+Here is a quick introduction on how to access our product information.  
+If you do not want this message to appear in the future, create an 
+initialization file (an empty file will do) in your home directory 
+called '~/.cadence/.synth_init'.
+
+  To access the product documentation in HTML and PDF, type 'cdnshelp'
+    at the system prompt. 
+  For a list of available commands, type 'help'. 
+  To view a man page for a command, type 'man <commandName>'.
+  To view a man page for an error message, type 'man <messageID>'.
+  For a list of all possible object types, type 'get_attribute -help'.
+  For a list of all available attributes by object type, type
+    'get_attribute * <object_type> -help'.
+  For a list of all attributes for every object type, type
+    'get_attribute * * -help'
+  To list only writable attributes, substitute 'get_attribute' with
+    'set_attribute'.
+  To get a template script to run RTL Compiler, use the 'write_template'
+    command.
+  To get a template script to run Conformal based on the current RTL
+    Compiler session, use the 'write_do_lec' command.
+  
+  Obsolete attributes in the current tool version.
+  To learn more, type 'get_attribute -help <attribute> <object>'.
+
+               object  attribute
+               ------  ---------
+               design  dp_perform_rewriting_operations
+               design  lp_map_to_srpg_cells
+               design  lp_optimize_dynamic_power_first
+               design  lp_srpg_pg_driver
+             instance  black_box
+             instance  dft_inherited_dont_scan
+             instance  inherited_default_power_domain
+             instance  lp_map_to_srpg_cells
+             instance  lp_map_to_srpg_type
+             instance  lp_srpg_pg_driver
+              libcell  black_box
+              libcell  location
+                  net  logic0_driven
+                  net  logic1_driven
+    nominal_condition  operating_condition
+                  pin  inherited_default_power_domain
+                 port  inherited_default_power_domain
+                 root  auto_ungroup_min_effort
+                 root  degenerate_complex_seqs
+                 root  dp_area_mode
+                 root  dp_perform_csa_operations
+                 root  dp_perform_rewriting_operations
+                 root  dp_perform_sharing_operations
+                 root  dp_perform_speculation_operations
+                 root  exact_match_seqs_async_controls
+                 root  hdl_flatten_array
+                 root  hdl_old_reg_naming
+                 root  hdl_reg_naming_style_scalar
+                 root  hdl_reg_naming_style_vector
+                 root  hdl_trim_target_index
+                 root  ignore_unknown_embedded_commands
+                 root  lbr_async_clr_pre_seqs_interchangable
+                 root  ple_parameter_source_priority
+                 root  pqos_virtual_buffer
+                 root  retime_preserve_state_points
+                 root  wlec_env_var
+                 root  wlec_flat_r2n
+                 root  wlec_no_exit
+                 root  wlec_old_lp_ec_flow
+                 root  wlec_save_ssion
+                 root  wlec_sim_lib
+                 root  wlec_sim_plus_lib
+                 root  wlec_skip_iso_check_hier_compare
+                 root  wlec_skip_lvl_check_hier_compare
+                 root  wlec_verbose
+            subdesign  allow_csa_subdesign
+            subdesign  allow_sharing_subdesign
+            subdesign  allow_speculation_subdesign
+            subdesign  auto_ungroup_ok
+            subdesign  dp_perform_rewriting_operations
+
+Send us feedback at rc_feedback@cadence.com.
+=============================================================================================================================================================================
+
+Sourcing './final_I_rtlscript.g' (Mon Jul 18 15:14:24 +0200 2016)...
+  Setting attribute of root '/': 'lib_search_path' = . /designtools/cds/cadence/kits/AMS4.10/liberty/c35_3.3V
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 3.300000, 25.000000) in library 'c35_CORELIB_TYP.lib'.
+        : The nominal operating condition represents either the nominal PVT values if specified in the library source, or the default PVT values (1.0, 1.0, 1.0).
+
+  Message Summary for Library c35_CORELIB_TYP.lib:
+  ************************************************
+  An unsupported construct was detected in this library. [LBR-40]: 3
+  Found 'statetable' group in cell. [LBR-83]: 1
+  Created nominal operating condition. [LBR-412]: 1
+ 
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 3.300000, 25.000000) in library 'c35_IOLIB_TYP.lib'.
+
+  Message Summary for Library c35_IOLIB_TYP.lib:
+  **********************************************
+  An unsupported construct was detected in this library. [LBR-40]: 2
+  Created nominal operating condition. [LBR-412]: 1
+ 
+Info    : Library Information. [LBR-415]
+        : Library: 'c35_CORELIB_TYP.lib', Total cells: '248', Usable cells: '233', Unusable cells: '15'.
+	List of unusable cells: 'DLSG1 DLY12 DLY22 DLY32 DLY42 BUSHD TIE0 TIE1 TIELOW TIEHIGH ... and others.'
+        : The number of unusable cells that is listed depends on the setting of the 'information_level' root attribute. If set to a value less than 6, the list is limited to 10 unusable cells. If set to a value equal to or higher than 6, all unusable cells are listed.
+Info    : Library Information. [LBR-415]
+        : Library: 'c35_IOLIB_TYP.lib', Total cells: '181', Usable cells: '0', Unusable cells: '181'.
+	List of unusable cells: 'BBCD1P BBCD4P BBCD4SMP BBCD8P BBCD8SMP BBCD8SP BBCD16P BBCD16SMP BBCD16SP BBCD24P ... and others.'
+  Setting attribute of root '/': 'library' = c35_CORELIB_TYP.lib c35_IOLIB_TYP.lib
+initial
+      |
+Warning : Ignoring unsynthesizable construct. [VLOGPT-37]
+        : Initial in file 'final_I.v' on line 40, column 7.
+        : The following constructs will be ignored:
+    - initial block
+    - final block
+    - program block
+    - property block
+    - sequence block
+    - covergroup
+    - gate drive strength
+    - system task enable
+    - reg declaration with initial value
+    - specify block.
+Info    : Library Information. [LBR-415]
+        : Library: 'c35_CORELIB_TYP.lib', Total cells: '248', Usable cells: '233', Unusable cells: '15'.
+	List of unusable cells: 'DLSG1 DLY12 DLY22 DLY32 DLY42 BUSHD TIE0 TIE1 TIELOW TIEHIGH ... and others.'
+Info    : Library Information. [LBR-415]
+        : Library: 'c35_IOLIB_TYP.lib', Total cells: '181', Usable cells: '0', Unusable cells: '181'.
+	List of unusable cells: 'BBCD1P BBCD4P BBCD4SMP BBCD8P BBCD8SMP BBCD8SP BBCD16P BBCD16SMP BBCD16SP BBCD24P ... and others.'
+  Libraries have 143 usable logic and 88 usable sequential lib-cells.
+  Elaborating top-level block 'spi_final' from file 'final_I.v'.
+Warning : Using default parameter value for module elaboration. [CDFG-818]
+        : Elaborating block 'spi_mosi' with default parameters value.
+Warning : Empty port expression. [CDFG-436]
+        : In module 'spi_mosi' in file 'spi_mosi.v' on line 2.
+Warning : Signal or variable has multiple drivers. [CDFG2G-622]
+        : 'data' in module 'spi_mosi' in file 'spi_mosi.v' on line 103, column 109.
+        : This may cause simulation mismatches between the original and synthesized designs.
+Warning : Using default parameter value for module elaboration. [CDFG-818]
+        : Elaborating block 'asy_fifo_input' with default parameters value.
+Error   : All assignments within a conditional statement should be either all blocking or all non-blocking. [CDFG-463] [elaborate]
+        : Assignment to 'w_pointer' in file 'asy_fifo_input.v' on line 108.
+        : The following example shows an unallowed mix of blocking and non-blocking assignments.
+    if (in)
+        out = data1;
+    else
+        out <= data2;
+  Module 'spi_final' contains errors and cannot be elaborated.
+1
+Encountered problems processing file: final_I_rtlscript.g
+rc:/> exit
+Normal exit.

@@ -1,0 +1,412 @@
+Host command: /cds/2013/INCISIV121/tools/verilog/bin/verilog.exe
+Command arguments:
+    clk_div.v
+    clk_div_test.v
+
+Tool:	VERILOG-XL	08.20.001-d log file created Jun 21, 2016  18:29:34
+Tool:	VERILOG-XL	08.20.001-d   Jun 21, 2016  18:29:34
+
+Copyright (c) 1995-2004 Cadence Design Systems, Inc.  All Rights Reserved.
+Unpublished -- rights reserved under the copyright laws of the United States.
+
+Copyright (c) 1995-2004 UNIX Systems Laboratories, Inc.  Reproduced with Permission.
+
+THIS SOFTWARE AND ON-LINE DOCUMENTATION CONTAIN CONFIDENTIAL INFORMATION
+AND TRADE SECRETS OF CADENCE DESIGN SYSTEMS, INC.  USE, DISCLOSURE, OR
+REPRODUCTION IS PROHIBITED WITHOUT THE PRIOR EXPRESS WRITTEN PERMISSION OF
+CADENCE DESIGN SYSTEMS, INC.
+RESTRICTED RIGHTS LEGEND
+
+Use, duplication, or disclosure by the Government is subject to
+restrictions as set forth in subparagraph (c)(1)(ii) of the Rights in
+Technical Data and Computer Software clause at DFARS 252.227-7013 or
+subparagraphs (c)(1) and (2) of Commercial Computer Software -- Restricted
+Rights at 48 CFR 52.227-19, as applicable.
+
+                Cadence Design Systems, Inc.
+                555 River Oaks Parkway
+                San Jose, California  95134
+
+For technical assistance please contact the Cadence Response Center at
+1-877-CDS-4911 or send email to support@cadence.com
+
+For more information on Cadence's Verilog-XL product line send email to
+talkv@cadence.com
+
+Compiling source file "clk_div.v"
+Compiling source file "clk_div_test.v"
+Highest level modules:
+clk_div_test
+
+time m_clk, spi_clk_en, nrst, spi_clk
+at time 0 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=0
+at time 10 nrst = 0 spi_clk_en = 1 m_clk = 1 spi_clk=0
+at time 20 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=0
+at time 50 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=0
+at time 100 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=0
+at time 150 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=0
+at time 200 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=0
+at time 250 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=0
+at time 300 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=0
+at time 350 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=0
+at time 400 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=0
+at time 450 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=0
+at time 500 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=0
+at time 550 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=0
+at time 600 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=0
+at time 650 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=0
+at time 700 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=0
+at time 750 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=0
+at time 800 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=0
+at time 850 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=0
+at time 900 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=0
+at time 950 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=0
+at time 1000 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=1
+at time 1050 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=1
+at time 1100 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=1
+at time 1150 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=1
+at time 1200 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=1
+at time 1250 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=1
+at time 1300 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=1
+at time 1350 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=1
+at time 1400 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=1
+at time 1450 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=1
+at time 1500 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=1
+at time 1550 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=1
+at time 1600 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=1
+at time 1650 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=1
+at time 1700 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=1
+at time 1750 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=1
+at time 1800 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=1
+at time 1850 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=1
+at time 1900 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=1
+at time 1950 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=1
+at time 2000 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=0
+at time 2050 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=0
+at time 2100 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=0
+at time 2150 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=0
+at time 2200 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=0
+at time 2250 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=0
+at time 2300 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=0
+at time 2350 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=0
+at time 2400 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=0
+at time 2450 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=0
+at time 2500 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=0
+at time 2550 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=0
+at time 2600 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=0
+at time 2650 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=0
+at time 2700 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=0
+at time 2750 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=0
+at time 2800 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=0
+at time 2850 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=0
+at time 2900 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=0
+at time 2950 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=0
+at time 3000 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=1
+at time 3050 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=1
+at time 3100 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=1
+at time 3150 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=1
+at time 3200 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=1
+at time 3250 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=1
+at time 3300 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=1
+at time 3350 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=1
+at time 3400 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=1
+at time 3450 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=1
+at time 3500 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=1
+at time 3550 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=1
+at time 3600 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=1
+at time 3650 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=1
+at time 3700 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=1
+at time 3750 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=1
+at time 3800 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=1
+at time 3850 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=1
+at time 3900 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=1
+at time 3950 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=1
+at time 4000 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=0
+at time 4050 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=0
+at time 4100 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=0
+at time 4150 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=0
+at time 4200 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=0
+at time 4250 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=0
+at time 4300 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=0
+at time 4350 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=0
+at time 4400 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=0
+at time 4450 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=0
+at time 4500 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=0
+at time 4550 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=0
+at time 4600 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=0
+at time 4650 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=0
+at time 4700 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=0
+at time 4750 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=0
+at time 4800 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=0
+at time 4850 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=0
+at time 4900 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=0
+at time 4950 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=0
+at time 5000 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=1
+at time 5050 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=1
+at time 5100 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=1
+at time 5150 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=1
+at time 5200 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=1
+at time 5250 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=1
+at time 5300 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=1
+at time 5350 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=1
+at time 5400 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=1
+at time 5450 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=1
+at time 5500 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=1
+at time 5550 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=1
+at time 5600 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=1
+at time 5650 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=1
+at time 5700 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=1
+at time 5750 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=1
+at time 5800 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=1
+at time 5850 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=1
+at time 5900 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=1
+at time 5950 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=1
+at time 6000 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=0
+at time 6050 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=0
+at time 6100 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=0
+at time 6150 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=0
+at time 6200 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=0
+at time 6250 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=0
+at time 6300 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=0
+at time 6350 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=0
+at time 6400 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=0
+at time 6450 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=0
+at time 6500 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=0
+at time 6550 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=0
+at time 6600 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=0
+at time 6650 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=0
+at time 6700 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=0
+at time 6750 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=0
+at time 6800 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=0
+at time 6850 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=0
+at time 6900 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=0
+at time 6950 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=0
+at time 7000 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=1
+at time 7050 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=1
+at time 7100 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=1
+at time 7150 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=1
+at time 7200 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=1
+at time 7250 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=1
+at time 7300 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=1
+at time 7350 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=1
+at time 7400 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=1
+at time 7450 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=1
+at time 7500 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=1
+at time 7550 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=1
+at time 7600 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=1
+at time 7650 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=1
+at time 7700 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=1
+at time 7750 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=1
+at time 7800 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=1
+at time 7850 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=1
+at time 7900 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=1
+at time 7950 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=1
+at time 8000 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=0
+at time 8050 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=0
+at time 8100 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=0
+at time 8150 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=0
+at time 8200 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=0
+at time 8250 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=0
+at time 8300 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=0
+at time 8350 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=0
+at time 8400 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=0
+at time 8450 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=0
+at time 8500 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=0
+at time 8550 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=0
+at time 8600 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=0
+at time 8650 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=0
+at time 8700 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=0
+at time 8750 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=0
+at time 8800 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=0
+at time 8850 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=0
+at time 8900 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=0
+at time 8950 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=0
+at time 9000 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=1
+at time 9050 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=1
+at time 9100 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=1
+at time 9150 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=1
+at time 9200 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=1
+at time 9250 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=1
+at time 9300 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=1
+at time 9350 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=1
+at time 9400 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=1
+at time 9450 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=1
+at time 9500 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=1
+at time 9550 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=1
+at time 9600 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=1
+at time 9650 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=1
+at time 9700 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=1
+at time 9750 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=1
+at time 9800 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=1
+at time 9850 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=1
+at time 9900 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=1
+at time 9950 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=1
+at time 10000 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=0
+at time 10020 nrst = 0 spi_clk_en = 1 m_clk = 1 spi_clk=0
+at time 10050 nrst = 0 spi_clk_en = 1 m_clk = 0 spi_clk=0
+at time 10100 nrst = 0 spi_clk_en = 1 m_clk = 1 spi_clk=0
+at time 10150 nrst = 0 spi_clk_en = 1 m_clk = 0 spi_clk=0
+at time 10200 nrst = 0 spi_clk_en = 1 m_clk = 1 spi_clk=0
+at time 10250 nrst = 0 spi_clk_en = 1 m_clk = 0 spi_clk=0
+at time 10300 nrst = 0 spi_clk_en = 1 m_clk = 1 spi_clk=0
+at time 10350 nrst = 0 spi_clk_en = 1 m_clk = 0 spi_clk=0
+at time 10400 nrst = 0 spi_clk_en = 1 m_clk = 1 spi_clk=0
+at time 10450 nrst = 0 spi_clk_en = 1 m_clk = 0 spi_clk=0
+at time 10500 nrst = 0 spi_clk_en = 1 m_clk = 1 spi_clk=0
+at time 10550 nrst = 0 spi_clk_en = 1 m_clk = 0 spi_clk=0
+at time 10600 nrst = 0 spi_clk_en = 1 m_clk = 1 spi_clk=0
+at time 10650 nrst = 0 spi_clk_en = 1 m_clk = 0 spi_clk=0
+at time 10700 nrst = 0 spi_clk_en = 1 m_clk = 1 spi_clk=0
+at time 10750 nrst = 0 spi_clk_en = 1 m_clk = 0 spi_clk=0
+at time 10800 nrst = 0 spi_clk_en = 1 m_clk = 1 spi_clk=0
+at time 10850 nrst = 0 spi_clk_en = 1 m_clk = 0 spi_clk=0
+at time 10900 nrst = 0 spi_clk_en = 1 m_clk = 1 spi_clk=0
+at time 10950 nrst = 0 spi_clk_en = 1 m_clk = 0 spi_clk=0
+at time 11000 nrst = 0 spi_clk_en = 1 m_clk = 1 spi_clk=0
+at time 11050 nrst = 0 spi_clk_en = 1 m_clk = 0 spi_clk=0
+at time 11100 nrst = 0 spi_clk_en = 1 m_clk = 1 spi_clk=0
+at time 11150 nrst = 0 spi_clk_en = 1 m_clk = 0 spi_clk=0
+at time 11200 nrst = 0 spi_clk_en = 1 m_clk = 1 spi_clk=0
+at time 11250 nrst = 0 spi_clk_en = 1 m_clk = 0 spi_clk=0
+at time 11300 nrst = 0 spi_clk_en = 1 m_clk = 1 spi_clk=0
+at time 11350 nrst = 0 spi_clk_en = 1 m_clk = 0 spi_clk=0
+at time 11400 nrst = 0 spi_clk_en = 1 m_clk = 1 spi_clk=0
+at time 11450 nrst = 0 spi_clk_en = 1 m_clk = 0 spi_clk=0
+at time 11500 nrst = 0 spi_clk_en = 1 m_clk = 1 spi_clk=0
+at time 11550 nrst = 0 spi_clk_en = 1 m_clk = 0 spi_clk=0
+at time 11600 nrst = 0 spi_clk_en = 1 m_clk = 1 spi_clk=0
+at time 11650 nrst = 0 spi_clk_en = 1 m_clk = 0 spi_clk=0
+at time 11700 nrst = 0 spi_clk_en = 1 m_clk = 1 spi_clk=0
+at time 11750 nrst = 0 spi_clk_en = 1 m_clk = 0 spi_clk=0
+at time 11800 nrst = 0 spi_clk_en = 1 m_clk = 1 spi_clk=0
+at time 11850 nrst = 0 spi_clk_en = 1 m_clk = 0 spi_clk=0
+at time 11900 nrst = 0 spi_clk_en = 1 m_clk = 1 spi_clk=0
+at time 11950 nrst = 0 spi_clk_en = 1 m_clk = 0 spi_clk=0
+at time 12000 nrst = 0 spi_clk_en = 1 m_clk = 1 spi_clk=0
+at time 12020 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=0
+at time 12050 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=0
+at time 12100 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=0
+at time 12150 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=0
+at time 12200 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=0
+at time 12250 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=0
+at time 12300 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=0
+at time 12350 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=0
+at time 12400 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=0
+at time 12450 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=0
+at time 12500 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=0
+at time 12550 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=0
+at time 12600 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=0
+at time 12650 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=0
+at time 12700 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=0
+at time 12750 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=0
+at time 12800 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=0
+at time 12850 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=0
+at time 12900 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=0
+at time 12950 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=0
+at time 13000 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=1
+at time 13050 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=1
+at time 13100 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=1
+at time 13150 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=1
+at time 13200 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=1
+at time 13250 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=1
+at time 13300 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=1
+at time 13350 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=1
+at time 13400 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=1
+at time 13450 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=1
+at time 13500 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=1
+at time 13550 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=1
+at time 13600 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=1
+at time 13650 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=1
+at time 13700 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=1
+at time 13750 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=1
+at time 13800 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=1
+at time 13850 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=1
+at time 13900 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=1
+at time 13950 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=1
+at time 14000 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=0
+at time 14020 nrst = 1 spi_clk_en = 0 m_clk = 1 spi_clk=0
+at time 14050 nrst = 1 spi_clk_en = 0 m_clk = 0 spi_clk=0
+at time 14100 nrst = 1 spi_clk_en = 0 m_clk = 1 spi_clk=0
+at time 14150 nrst = 1 spi_clk_en = 0 m_clk = 0 spi_clk=0
+at time 14200 nrst = 1 spi_clk_en = 0 m_clk = 1 spi_clk=0
+at time 14250 nrst = 1 spi_clk_en = 0 m_clk = 0 spi_clk=0
+at time 14300 nrst = 1 spi_clk_en = 0 m_clk = 1 spi_clk=0
+at time 14350 nrst = 1 spi_clk_en = 0 m_clk = 0 spi_clk=0
+at time 14400 nrst = 1 spi_clk_en = 0 m_clk = 1 spi_clk=0
+at time 14450 nrst = 1 spi_clk_en = 0 m_clk = 0 spi_clk=0
+at time 14500 nrst = 1 spi_clk_en = 0 m_clk = 1 spi_clk=0
+at time 14550 nrst = 1 spi_clk_en = 0 m_clk = 0 spi_clk=0
+at time 14600 nrst = 1 spi_clk_en = 0 m_clk = 1 spi_clk=0
+at time 14650 nrst = 1 spi_clk_en = 0 m_clk = 0 spi_clk=0
+at time 14700 nrst = 1 spi_clk_en = 0 m_clk = 1 spi_clk=0
+at time 14750 nrst = 1 spi_clk_en = 0 m_clk = 0 spi_clk=0
+at time 14800 nrst = 1 spi_clk_en = 0 m_clk = 1 spi_clk=0
+at time 14850 nrst = 1 spi_clk_en = 0 m_clk = 0 spi_clk=0
+at time 14900 nrst = 1 spi_clk_en = 0 m_clk = 1 spi_clk=0
+at time 14950 nrst = 1 spi_clk_en = 0 m_clk = 0 spi_clk=0
+at time 15000 nrst = 1 spi_clk_en = 0 m_clk = 1 spi_clk=0
+at time 15050 nrst = 1 spi_clk_en = 0 m_clk = 0 spi_clk=0
+at time 15100 nrst = 1 spi_clk_en = 0 m_clk = 1 spi_clk=0
+at time 15150 nrst = 1 spi_clk_en = 0 m_clk = 0 spi_clk=0
+at time 15200 nrst = 1 spi_clk_en = 0 m_clk = 1 spi_clk=0
+at time 15250 nrst = 1 spi_clk_en = 0 m_clk = 0 spi_clk=0
+at time 15300 nrst = 1 spi_clk_en = 0 m_clk = 1 spi_clk=0
+at time 15350 nrst = 1 spi_clk_en = 0 m_clk = 0 spi_clk=0
+at time 15400 nrst = 1 spi_clk_en = 0 m_clk = 1 spi_clk=0
+at time 15450 nrst = 1 spi_clk_en = 0 m_clk = 0 spi_clk=0
+at time 15500 nrst = 1 spi_clk_en = 0 m_clk = 1 spi_clk=0
+at time 15550 nrst = 1 spi_clk_en = 0 m_clk = 0 spi_clk=0
+at time 15600 nrst = 1 spi_clk_en = 0 m_clk = 1 spi_clk=0
+at time 15650 nrst = 1 spi_clk_en = 0 m_clk = 0 spi_clk=0
+at time 15700 nrst = 1 spi_clk_en = 0 m_clk = 1 spi_clk=0
+at time 15750 nrst = 1 spi_clk_en = 0 m_clk = 0 spi_clk=0
+at time 15800 nrst = 1 spi_clk_en = 0 m_clk = 1 spi_clk=0
+at time 15850 nrst = 1 spi_clk_en = 0 m_clk = 0 spi_clk=0
+at time 15900 nrst = 1 spi_clk_en = 0 m_clk = 1 spi_clk=0
+at time 15950 nrst = 1 spi_clk_en = 0 m_clk = 0 spi_clk=0
+at time 16000 nrst = 1 spi_clk_en = 0 m_clk = 1 spi_clk=0
+at time 16020 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=0
+at time 16050 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=0
+at time 16100 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=0
+at time 16150 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=0
+at time 16200 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=0
+at time 16250 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=0
+at time 16300 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=0
+at time 16350 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=0
+at time 16400 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=0
+at time 16450 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=0
+at time 16500 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=0
+at time 16550 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=0
+at time 16600 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=0
+at time 16650 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=0
+at time 16700 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=0
+at time 16750 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=0
+at time 16800 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=0
+at time 16850 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=0
+at time 16900 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=0
+at time 16950 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=0
+at time 17000 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=1
+at time 17050 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=1
+at time 17100 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=1
+at time 17150 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=1
+at time 17200 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=1
+at time 17250 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=1
+at time 17300 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=1
+at time 17350 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=1
+at time 17400 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=1
+at time 17450 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=1
+at time 17500 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=1
+at time 17550 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=1
+at time 17600 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=1
+at time 17650 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=1
+at time 17700 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=1
+at time 17750 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=1
+at time 17800 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=1
+at time 17850 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=1
+at time 17900 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=1
+at time 17950 nrst = 1 spi_clk_en = 1 m_clk = 0 spi_clk=1
+at time 18000 nrst = 1 spi_clk_en = 1 m_clk = 1 spi_clk=0
+L52 "clk_div_test.v": $finish at simulation time 18020000
+0 simulation events (use +profile or +listcounts option to count)
+CPU time: 0.0 secs to compile + 0.0 secs to link + 0.0 secs in simulation
+End of Tool:	VERILOG-XL	08.20.001-d   Jun 21, 2016  18:29:35

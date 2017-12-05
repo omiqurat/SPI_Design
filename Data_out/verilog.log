@@ -1,0 +1,213 @@
+Host command: /cds/2013/INCISIV121/tools/verilog/bin/verilog.exe
+Command arguments:
+    asy_fifo.v
+    asy_fifo_test.v
+
+Tool:	VERILOG-XL	08.20.001-d log file created Jun 24, 2016  20:51:18
+Tool:	VERILOG-XL	08.20.001-d   Jun 24, 2016  20:51:18
+
+Copyright (c) 1995-2004 Cadence Design Systems, Inc.  All Rights Reserved.
+Unpublished -- rights reserved under the copyright laws of the United States.
+
+Copyright (c) 1995-2004 UNIX Systems Laboratories, Inc.  Reproduced with Permission.
+
+THIS SOFTWARE AND ON-LINE DOCUMENTATION CONTAIN CONFIDENTIAL INFORMATION
+AND TRADE SECRETS OF CADENCE DESIGN SYSTEMS, INC.  USE, DISCLOSURE, OR
+REPRODUCTION IS PROHIBITED WITHOUT THE PRIOR EXPRESS WRITTEN PERMISSION OF
+CADENCE DESIGN SYSTEMS, INC.
+RESTRICTED RIGHTS LEGEND
+
+Use, duplication, or disclosure by the Government is subject to
+restrictions as set forth in subparagraph (c)(1)(ii) of the Rights in
+Technical Data and Computer Software clause at DFARS 252.227-7013 or
+subparagraphs (c)(1) and (2) of Commercial Computer Software -- Restricted
+Rights at 48 CFR 52.227-19, as applicable.
+
+                Cadence Design Systems, Inc.
+                555 River Oaks Parkway
+                San Jose, California  95134
+
+For technical assistance please contact the Cadence Response Center at
+1-877-CDS-4911 or send email to support@cadence.com
+
+For more information on Cadence's Verilog-XL product line send email to
+talkv@cadence.com
+
+Compiling source file "asy_fifo.v"
+Compiling source file "asy_fifo_test.v"
+
+Warning!  Redundant digits given in decimal number          [Verilog-RDGDN]    
+          "asy_fifo_test.v", 84: 
+
+Warning!  Redundant digits given in decimal number          [Verilog-RDGDN]    
+          "asy_fifo_test.v", 85: 
+
+Warning!  Redundant digits given in decimal number          [Verilog-RDGDN]    
+          "asy_fifo_test.v", 86: 
+
+Warning!  Redundant digits given in decimal number          [Verilog-RDGDN]    
+          "asy_fifo_test.v", 87: 
+
+Warning!  Redundant digits given in decimal number          [Verilog-RDGDN]    
+          "asy_fifo_test.v", 88: 
+
+Warning!  Port sizes differ in port connection (port 0)     [Verilog-PCDPC]    
+          "asy_fifo_test.v", 14: rdata
+Highest level modules:
+asy_fifo_test
+
+at time 50 clk = 1   rst= 0  winc=1 rinc=0 wdata=  1 rdata=  x 
+at time 50 w_pointer= 1
+at time 100 clk = 0   rst= 0  winc=1 rinc=0 wdata=  1 rdata=  x 
+at time 150 clk = 1   rst= 0  winc=1 rinc=0 wdata= 20 rdata=  x 
+at time 150 w_pointer= 2
+at time 200 clk = 0   rst= 0  winc=1 rinc=0 wdata= 20 rdata=  x 
+at time 250 clk = 1   rst= 0  winc=1 rinc=0 wdata= 20 rdata=  x 
+at time 250 w_pointer= 3
+at time 300 clk = 0   rst= 0  winc=1 rinc=0 wdata= 30 rdata=  x 
+at time 350 clk = 1   rst= 0  winc=1 rinc=0 wdata= 30 rdata=  x 
+at time 350 w_pointer= 4
+at time 400 clk = 0   rst= 0  winc=1 rinc=0 wdata= 30 rdata=  x 
+at time 450 clk = 1   rst= 0  winc=1 rinc=0 wdata= 30 rdata=  x 
+at time 450 w_pointer= 5
+at time 500 clk = 0   rst= 0  winc=0 rinc=1 wdata= 40 rdata=  x 
+at time 550 clk = 1   rst= 0  winc=0 rinc=1 wdata= 40 rdata=  x 
+at time 550 r_pointer= 1
+at time 600 clk = 0   rst= 0  winc=0 rinc=1 wdata= 40 rdata=  1 
+at time 650 clk = 1   rst= 0  winc=0 rinc=1 wdata= 50 rdata=  1 
+at time 650 r_pointer= 2
+at time 700 clk = 0   rst= 0  winc=0 rinc=1 wdata= 50 rdata= 20 
+at time 750 clk = 1   rst= 0  winc=0 rinc=1 wdata= 50 rdata= 20 
+at time 750 r_pointer= 3
+at time 800 clk = 0   rst= 0  winc=0 rinc=1 wdata= 50 rdata= 20 
+at time 850 clk = 1   rst= 0  winc=0 rinc=1 wdata= 60 rdata= 20 
+at time 850 r_pointer= 4
+at time 900 clk = 0   rst= 0  winc=0 rinc=1 wdata= 60 rdata= 30 
+at time 950 clk = 1   rst= 0  winc=0 rinc=1 wdata= 60 rdata= 30 
+at time 950 r_pointer= 5
+at time 1000 clk = 0   rst= 0  winc=1 rinc=0 wdata= 70 rdata= 30 
+at time 1050 clk = 1   rst= 0  winc=1 rinc=0 wdata= 70 rdata= 30 
+at time 1050 w_pointer= 6
+at time 1100 clk = 0   rst= 0  winc=1 rinc=0 wdata= 70 rdata= 30 
+at time 1150 clk = 1   rst= 0  winc=1 rinc=0 wdata= 70 rdata= 30 
+at time 1150 w_pointer= 7
+at time 1200 clk = 0   rst= 0  winc=1 rinc=0 wdata= 70 rdata= 30 
+at time 1250 clk = 1   rst= 0  winc=1 rinc=0 wdata= 70 rdata= 30 
+at time 1250 w_pointer= 8
+at time 1300 clk = 0   rst= 0  winc=1 rinc=0 wdata=100 rdata= 30 
+at time 1350 clk = 1   rst= 0  winc=1 rinc=0 wdata=100 rdata= 30 
+at time 1350 w_pointer= 9
+at time 1400 clk = 0   rst= 0  winc=1 rinc=0 wdata=100 rdata= 30 
+at time 1450 clk = 1   rst= 0  winc=1 rinc=0 wdata=100 rdata= 30 
+at time 1450 w_pointer=10
+at time 1500 clk = 0   rst= 0  winc=1 rinc=0 wdata=100 rdata= 30 
+at time 1550 clk = 1   rst= 0  winc=1 rinc=0 wdata=100 rdata= 30 
+at time 1550 w_pointer=11
+at time 1600 clk = 0   rst= 0  winc=1 rinc=0 wdata=100 rdata= 30 
+at time 1650 clk = 1   rst= 0  winc=1 rinc=0 wdata=120 rdata= 30 
+at time 1650 w_pointer=12
+at time 1700 clk = 0   rst= 0  winc=1 rinc=0 wdata=120 rdata= 30 
+at time 1750 clk = 1   rst= 0  winc=1 rinc=0 wdata=120 rdata= 30 
+at time 1750 w_pointer=13
+at time 1800 clk = 0   rst= 0  winc=1 rinc=0 wdata=120 rdata= 30 
+at time 1850 clk = 1   rst= 0  winc=1 rinc=0 wdata=120 rdata= 30 
+at time 1850 w_pointer=14
+at time 1900 clk = 0   rst= 0  winc=1 rinc=0 wdata=120 rdata= 30 
+at time 1950 clk = 1   rst= 0  winc=1 rinc=0 wdata=130 rdata= 30 
+at time 1950 w_pointer=15
+at time 2000 clk = 0   rst= 0  winc=1 rinc=0 wdata=130 rdata= 30 
+at time 2050 clk = 1   rst= 0  winc=1 rinc=0 wdata=130 rdata= 30 
+at time 2050 w_pointer=16
+at time 2100 clk = 0   rst= 0  winc=1 rinc=0 wdata=130 rdata= 30 
+at time 2150 clk = 1   rst= 0  winc=1 rinc=0 wdata=130 rdata= 30 
+at time 2150 w_pointer=17
+at time 2200 clk = 0   rst= 0  winc=1 rinc=0 wdata=130 rdata= 30 
+at time 2250 clk = 1   rst= 0  winc=1 rinc=0 wdata=130 rdata= 30 
+at time 2250 w_pointer=18
+at time 2300 clk = 0   rst= 0  winc=1 rinc=0 wdata=140 rdata= 30 
+at time 2350 clk = 1   rst= 0  winc=1 rinc=0 wdata=140 rdata= 30 
+at time 2350 w_pointer=19
+at time 2400 clk = 0   rst= 0  winc=1 rinc=0 wdata=140 rdata= 30 
+at time 2450 clk = 1   rst= 0  winc=1 rinc=0 wdata=140 rdata= 30 
+at time 2450 w_pointer=20
+at time 2500 clk = 0   rst= 0  winc=1 rinc=0 wdata=140 rdata= 30 
+at time 2550 clk = 1   rst= 0  winc=1 rinc=0 wdata=140 rdata= 30 
+at time 2550 w_pointer=21
+at time 2600 clk = 0   rst= 0  winc=0 rinc=1 wdata=150 rdata= 30 
+at time 2650 clk = 1   rst= 0  winc=0 rinc=1 wdata=150 rdata= 30 
+at time 2650 r_pointer= 6
+at time 2700 clk = 0   rst= 0  winc=0 rinc=1 wdata=150 rdata= 70 
+at time 2750 clk = 1   rst= 0  winc=0 rinc=1 wdata=150 rdata= 70 
+at time 2750 r_pointer= 7
+at time 2800 clk = 0   rst= 0  winc=0 rinc=1 wdata= 55 rdata= 70 
+at time 2850 clk = 1   rst= 0  winc=0 rinc=1 wdata= 55 rdata= 70 
+at time 2850 r_pointer= 8
+at time 2900 clk = 0   rst= 0  winc=0 rinc=1 wdata= 55 rdata= 70 
+at time 2950 clk = 1   rst= 0  winc=0 rinc=1 wdata=200 rdata= 70 
+at time 2950 r_pointer= 9
+at time 3000 clk = 0   rst= 0  winc=0 rinc=1 wdata=200 rdata=100 
+at time 3050 clk = 1   rst= 0  winc=0 rinc=1 wdata=200 rdata=100 
+at time 3050 r_pointer=10
+at time 3100 clk = 0   rst= 0  winc=0 rinc=1 wdata=200 rdata=100 
+at time 3150 clk = 1   rst= 0  winc=1 rinc=0 wdata= 44 rdata=100 
+at time 3150 w_pointer=22
+at time 3200 clk = 0   rst= 0  winc=1 rinc=0 wdata= 44 rdata=100 
+at time 3250 clk = 1   rst= 0  winc=1 rinc=0 wdata= 44 rdata=100 
+at time 3250 w_pointer=23
+at time 3300 clk = 0   rst= 0  winc=1 rinc=0 wdata= 44 rdata=100 
+at time 3350 clk = 1   rst= 0  winc=1 rinc=0 wdata= 44 rdata=100 
+at time 3350 w_pointer=24
+at time 3400 clk = 0   rst= 0  winc=1 rinc=0 wdata= 44 rdata=100 
+at time 3450 clk = 1   rst= 0  winc=1 rinc=0 wdata=232 rdata=100 
+at time 3450 w_pointer=25
+at time 3500 clk = 0   rst= 0  winc=1 rinc=0 wdata=232 rdata=100 
+at time 3550 clk = 1   rst= 0  winc=1 rinc=0 wdata=232 rdata=100 
+at time 3550 w_pointer=26
+at time 3600 clk = 0   rst= 0  winc=1 rinc=0 wdata=232 rdata=100 
+at time 3650 clk = 1   rst= 0  winc=1 rinc=0 wdata=232 rdata=100 
+at time 3650 w_pointer=27
+at time 3700 clk = 0   rst= 0  winc=1 rinc=0 wdata=232 rdata=100 
+at time 3750 clk = 1   rst= 0  winc=1 rinc=0 wdata=252 rdata=100 
+at time 3750 w_pointer=28
+at time 3800 clk = 0   rst= 0  winc=1 rinc=0 wdata=252 rdata=100 
+at time 3850 clk = 1   rst= 0  winc=1 rinc=0 wdata=252 rdata=100 
+at time 3850 w_pointer=29
+at time 3900 clk = 0   rst= 0  winc=1 rinc=0 wdata=252 rdata=100 
+at time 3950 clk = 1   rst= 0  winc=1 rinc=0 wdata=252 rdata=100 
+at time 3950 w_pointer=30
+at time 4000 clk = 0   rst= 0  winc=1 rinc=0 wdata=252 rdata=100 
+at time 4050 clk = 1   rst= 0  winc=1 rinc=0 wdata=252 rdata=100 
+at time 4050 w_pointer=31
+at time 4100 clk = 0   rst= 0  winc=1 rinc=0 wdata= 20 rdata=100 
+at time 4150 clk = 1   rst= 0  winc=1 rinc=0 wdata= 20 rdata=100 
+at time 4200 clk = 0   rst= 0  winc=1 rinc=0 wdata= 20 rdata=100 
+at time 4250 clk = 1   rst= 0  winc=1 rinc=0 wdata= 20 rdata=100 
+at time 4300 clk = 0   rst= 0  winc=1 rinc=0 wdata= 20 rdata=100 
+at time 4350 clk = 1   rst= 0  winc=1 rinc=0 wdata= 20 rdata=100 
+at time 4400 clk = 0   rst= 0  winc=1 rinc=0 wdata= 16 rdata=100 
+at time 4450 clk = 1   rst= 0  winc=1 rinc=0 wdata= 16 rdata=100 
+at time 4500 clk = 0   rst= 0  winc=1 rinc=0 wdata= 16 rdata=100 
+at time 4550 clk = 1   rst= 0  winc=1 rinc=0 wdata= 16 rdata=100 
+at time 4600 clk = 0   rst= 0  winc=1 rinc=0 wdata= 16 rdata=100 
+at time 4650 clk = 1   rst= 0  winc=1 rinc=0 wdata= 16 rdata=100 
+at time 4700 clk = 0   rst= 0  winc=1 rinc=0 wdata= 16 rdata=100 
+at time 4750 clk = 1   rst= 0  winc=0 rinc=1 wdata= 26 rdata=100 
+at time 4750 r_pointer=11
+at time 4800 clk = 0   rst= 0  winc=0 rinc=1 wdata= 26 rdata=100 
+at time 4850 clk = 1   rst= 0  winc=0 rinc=1 wdata= 26 rdata=100 
+at time 4850 r_pointer=12
+at time 4900 clk = 0   rst= 0  winc=0 rinc=1 wdata= 26 rdata=120 
+at time 4950 clk = 1   rst= 0  winc=0 rinc=1 wdata= 26 rdata=120 
+at time 4950 r_pointer=13
+at time 5000 clk = 0   rst= 0  winc=0 rinc=1 wdata= 26 rdata=120 
+at time 5050 clk = 1   rst= 0  winc=0 rinc=1 wdata= 26 rdata=120 
+at time 5050 r_pointer=14
+at time 5100 clk = 0   rst= 0  winc=0 rinc=1 wdata= 26 rdata=120 
+at time 5150 clk = 1   rst= 0  winc=0 rinc=1 wdata= 26 rdata=120 
+at time 5150 r_pointer=15
+at time 5200 clk = 0   rst= 0  winc=0 rinc=1 wdata= 26 rdata=130 
+L93 "asy_fifo_test.v": $finish at simulation time 5240000
+6 warnings
+0 simulation events (use +profile or +listcounts option to count)
+CPU time: 0.0 secs to compile + 0.0 secs to link + 0.0 secs in simulation
+End of Tool:	VERILOG-XL	08.20.001-d   Jun 24, 2016  20:51:18

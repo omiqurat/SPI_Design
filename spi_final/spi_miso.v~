@@ -1,0 +1,110 @@
+`timescale 1 ns / 1 ps
+module spi_miso (control_clk_miso,spi_mosi_out,spi_miso_out,spi_cs,spi_clk,spi_miso_in);
+
+ parameter DSIZE = 8;
+output control_clk_miso;
+output spi_mosi_out;
+ output  [DSIZE-1:0] spi_miso_out;
+ input spi_cs;
+ input  spi_clk;
+input spi_miso_in;
+
+	
+reg control_clk_miso;
+reg [DSIZE-1:0] spi_miso_out;
+reg spi_mosi_out;
+reg [DSIZE-1:0] data,final_data;
+reg[2:0] point;
+      
+reg [2:0] control;
+
+	
+
+
+
+initial
+    begin
+	     point<=3'b000;
+            
+              control<=3'b010;
+              control_clk_miso<=1'b0;
+              data<= 8'b00000000;
+ 
+		end
+	
+
+
+// create control clock for sending data to asy_fifo_output
+
+
+always@(posedge spi_clk)
+
+
+        begin
+           if(control==3'd3)
+               begin
+   		
+                        control_clk_miso<=~control_clk_miso;
+   		       control<=0;
+   
+			end
+		else
+				
+                       begin
+			control=control+1;
+		            end
+        end
+	
+
+
+// spi_clk read data bit by bit from slave and keep it in final data
+
+always @(posedge spi_clk)
+
+	 if(spi_cs) 
+             begin
+           spi_mosi_out<=0;
+            point<=0;
+        
+               
+               end
+
+	  else if (!spi_cs )
+	   begin
+	       if (point==3'b111)
+                   begin      
+                    final_data<=data;
+                         point<=0;
+                     
+                    end
+               else
+                   begin
+		    data[point]<=spi_miso_in;	
+
+ $display ("at time %0d data=%b  ", $time, data);
+ $display ("at time %0d point=%d  ", $time, point);
+
+                     point<= point+1;
+
+		    end
+	 
+		   end 
+ // control clock control final data and push it to spi_miso_out
+
+always @(posedge control_clk_miso)
+
+if(spi_cs)
+spi_miso_out<=0;
+else                
+   begin
+
+               
+                spi_miso_out<=final_data;
+                 
+            
+          		end	
+
+		
+
+		endmodule
+

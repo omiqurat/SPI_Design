@@ -1,0 +1,878 @@
+Checking out license 'RTL_Compiler_Ultra'... (0 seconds elapsed)
+Reading GUI preferences file '/fibus/fs3/18/c00cds01/.cadence/rc.gui'.
+
+                                                                      Cadence Encounter(R) RTL Compiler
+                                                              Version v11.20-s017_1 (64-bit), built Jul 19 2012
+
+
+Copyright notice: Copyright 1997-2012 Cadence Design Systems, Inc. All rights reserved worldwide. 
+
+Patent notices: Protected by U.S. Patents: 5892687; 6470486; 6772398; 6772399; 6807651; 6832357; 7007247; 8127260 
+
+WARNING: This version of RC is 1461 days old.
+         Visit downloads.cadence.com for the latest release of RC.
+
+
+=============================================================================================================================================================================
+                                                                Welcome to Cadence Encounter(R) RTL Compiler
+
+Here is a quick introduction on how to access our product information.  
+If you do not want this message to appear in the future, create an 
+initialization file (an empty file will do) in your home directory 
+called '~/.cadence/.synth_init'.
+
+  To access the product documentation in HTML and PDF, type 'cdnshelp'
+    at the system prompt. 
+  For a list of available commands, type 'help'. 
+  To view a man page for a command, type 'man <commandName>'.
+  To view a man page for an error message, type 'man <messageID>'.
+  For a list of all possible object types, type 'get_attribute -help'.
+  For a list of all available attributes by object type, type
+    'get_attribute * <object_type> -help'.
+  For a list of all attributes for every object type, type
+    'get_attribute * * -help'
+  To list only writable attributes, substitute 'get_attribute' with
+    'set_attribute'.
+  To get a template script to run RTL Compiler, use the 'write_template'
+    command.
+  To get a template script to run Conformal based on the current RTL
+    Compiler session, use the 'write_do_lec' command.
+  
+  Obsolete attributes in the current tool version.
+  To learn more, type 'get_attribute -help <attribute> <object>'.
+
+               object  attribute
+               ------  ---------
+               design  dp_perform_rewriting_operations
+               design  lp_map_to_srpg_cells
+               design  lp_optimize_dynamic_power_first
+               design  lp_srpg_pg_driver
+             instance  black_box
+             instance  dft_inherited_dont_scan
+             instance  inherited_default_power_domain
+             instance  lp_map_to_srpg_cells
+             instance  lp_map_to_srpg_type
+             instance  lp_srpg_pg_driver
+              libcell  black_box
+              libcell  location
+                  net  logic0_driven
+                  net  logic1_driven
+    nominal_condition  operating_condition
+                  pin  inherited_default_power_domain
+                 port  inherited_default_power_domain
+                 root  auto_ungroup_min_effort
+                 root  degenerate_complex_seqs
+                 root  dp_area_mode
+                 root  dp_perform_csa_operations
+                 root  dp_perform_rewriting_operations
+                 root  dp_perform_sharing_operations
+                 root  dp_perform_speculation_operations
+                 root  exact_match_seqs_async_controls
+                 root  hdl_flatten_array
+                 root  hdl_old_reg_naming
+                 root  hdl_reg_naming_style_scalar
+                 root  hdl_reg_naming_style_vector
+                 root  hdl_trim_target_index
+                 root  ignore_unknown_embedded_commands
+                 root  lbr_async_clr_pre_seqs_interchangable
+                 root  ple_parameter_source_priority
+                 root  pqos_virtual_buffer
+                 root  retime_preserve_state_points
+                 root  wlec_env_var
+                 root  wlec_flat_r2n
+                 root  wlec_no_exit
+                 root  wlec_old_lp_ec_flow
+                 root  wlec_save_ssion
+                 root  wlec_sim_lib
+                 root  wlec_sim_plus_lib
+                 root  wlec_skip_iso_check_hier_compare
+                 root  wlec_skip_lvl_check_hier_compare
+                 root  wlec_verbose
+            subdesign  allow_csa_subdesign
+            subdesign  allow_sharing_subdesign
+            subdesign  allow_speculation_subdesign
+            subdesign  auto_ungroup_ok
+            subdesign  dp_perform_rewriting_operations
+
+Send us feedback at rc_feedback@cadence.com.
+=============================================================================================================================================================================
+
+Sourcing './final_rtlscript.g' (Tue Jul 19 16:36:09 +0200 2016)...
+  Setting attribute of root '/': 'lib_search_path' = . /designtools/cds/cadence/kits/AMS4.10/liberty/c35_3.3V
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 3.300000, 25.000000) in library 'c35_CORELIB_TYP.lib'.
+        : The nominal operating condition represents either the nominal PVT values if specified in the library source, or the default PVT values (1.0, 1.0, 1.0).
+
+  Message Summary for Library c35_CORELIB_TYP.lib:
+  ************************************************
+  An unsupported construct was detected in this library. [LBR-40]: 3
+  Found 'statetable' group in cell. [LBR-83]: 1
+  Created nominal operating condition. [LBR-412]: 1
+ 
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 3.300000, 25.000000) in library 'c35_IOLIB_TYP.lib'.
+
+  Message Summary for Library c35_IOLIB_TYP.lib:
+  **********************************************
+  An unsupported construct was detected in this library. [LBR-40]: 2
+  Created nominal operating condition. [LBR-412]: 1
+ 
+Info    : Library Information. [LBR-415]
+        : Library: 'c35_CORELIB_TYP.lib', Total cells: '248', Usable cells: '233', Unusable cells: '15'.
+	List of unusable cells: 'DLSG1 DLY12 DLY22 DLY32 DLY42 BUSHD TIE0 TIE1 TIELOW TIEHIGH ... and others.'
+        : The number of unusable cells that is listed depends on the setting of the 'information_level' root attribute. If set to a value less than 6, the list is limited to 10 unusable cells. If set to a value equal to or higher than 6, all unusable cells are listed.
+Info    : Library Information. [LBR-415]
+        : Library: 'c35_IOLIB_TYP.lib', Total cells: '181', Usable cells: '0', Unusable cells: '181'.
+	List of unusable cells: 'BBCD1P BBCD4P BBCD4SMP BBCD8P BBCD8SMP BBCD8SP BBCD16P BBCD16SMP BBCD16SP BBCD24P ... and others.'
+  Setting attribute of root '/': 'library' = c35_CORELIB_TYP.lib c35_IOLIB_TYP.lib
+Info    : Library Information. [LBR-415]
+        : Library: 'c35_CORELIB_TYP.lib', Total cells: '248', Usable cells: '233', Unusable cells: '15'.
+	List of unusable cells: 'DLSG1 DLY12 DLY22 DLY32 DLY42 BUSHD TIE0 TIE1 TIELOW TIEHIGH ... and others.'
+Info    : Library Information. [LBR-415]
+        : Library: 'c35_IOLIB_TYP.lib', Total cells: '181', Usable cells: '0', Unusable cells: '181'.
+	List of unusable cells: 'BBCD1P BBCD4P BBCD4SMP BBCD8P BBCD8SMP BBCD8SP BBCD16P BBCD16SMP BBCD16SP BBCD24P ... and others.'
+  Libraries have 143 usable logic and 88 usable sequential lib-cells.
+  Elaborating top-level block 'final_spi' from file 'final.v'.
+Warning : Using default parameter value for module elaboration. [CDFG-818]
+        : Elaborating block 'asy_fifo_input' with default parameters value.
+Warning : Using default parameter value for module elaboration. [CDFG-818]
+        : Elaborating block 'spi_mosi' with default parameters value.
+Warning : Using default parameter value for module elaboration. [CDFG-818]
+        : Elaborating block 'spi_miso' with default parameters value.
+Warning : Using default parameter value for module elaboration. [CDFG-818]
+        : Elaborating block 'asy_fifo_output' with default parameters value.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'r_pointer' in module 'asy_fifo_output' in file 'asy_fifo_output.v' on line 159.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'ex_mem' in module 'asy_fifo_output' in file 'asy_fifo_output.v' on line 159.
+Warning : Removing unused register. [CDFG-508]
+        : Removing unused flip-flop register 'ex_mem[15]' in module 'asy_fifo_output' in file 'asy_fifo_output.v' on line 87.
+        : A flip-flop or latch that was inferred for an unused signal or variable was removed. Use 'set_attribute hdl_preserve_unused_registers true /' to preserve the flip-flop or latch.
+Warning : Removing unused register. [CDFG-508]
+        : Removing unused flip-flop register 'rdata' in module 'asy_fifo_output' in file 'asy_fifo_output.v' on line 121.
+  Done elaborating 'final_spi'.
+  Setting attribute of root '/': 'information_level' = 6
+Info    : Deleting instances not driving any primary outputs. [GLO-32]
+        : Deleting 1 sequential instance. 
+Following instance is deleted as they do not drive any primary output:
+'O/O2/spi_mosi_out_reg'.
+        : Optimizations such as constant propagation or redundancy removal could change the connections so an instance does not drive any primary outputs anymore. To see the list of deleted instances, set the 'information_level' attribute to 2 or above.
+Info    : Deleting instances not driving any primary outputs. [GLO-32]
+        : Deleting 72 hierarchical instances. 
+Following instances are deleted as they do not drive any primary output:
+'C/mux_add_byte_14_8', 'C/mux_add_byte_22_49', 'C/mux_data_av_14_8', 
+'C/mux_data_av_22_49', 'C/mux_read_req_14_8', 'C/mux_read_req_22_49', 
+'I/B/mux_counter_12_7', 'I/B/mux_spi_clk_12_7', 'I/I1/mux_data_en_25_4', 
+'I/I1/mux_data_en_31_31', 'I/I1/mux_data_to_mosi_132_5', 
+'I/I1/mux_r_empty_132_5', 'I/I1/mux_r_empty_143_16', 
+'I/I1/mux_r_pointer_132_5', 'I/I1/mux_r_pointer_143_16', 
+'I/I1/mux_rdata_132_5', 'I/I1/mux_rinc_62_5', 'I/I1/mux_rinc_69_33', 
+'I/I1/mux_rinc_75_33', 'I/I1/mux_spi_cs_43_4', 'I/I1/mux_spi_cs_49_34', 
+'I/I1/mux_w_full_97_12', 'I/I1/mux_w_full_105_37', 
+'I/I1/mux_w_pointer_97_12', 'I/I1/mux_winc_62_5', 'I/I1/mux_winc_69_33', 
+'I/I2/mux_control_29_4', 'I/I2/mux_control_34_36', 
+'I/I2/mux_control_clk_29_4', 'I/I2/mux_data_47_4', 'I/I2/mux_data_51_24', 
+'I/I2/mux_point_73_4', 'I/I2/mux_point_81_22', 'I/I2/mux_point_add_73_4', 
+'I/I2/mux_point_add_81_22', 'I/I2/mux_spi_mosi_out_73_4', 
+'I/I2/mux_spi_mosi_out_81_22', 'L/mux_counter_12_7', 'L/mux_spi_clk_12_7', 
+'O/A/mux_counter_12_7', 'O/A/mux_spi_clk_12_7', 'O/O1/mux_r_empty_123_5', 
+'O/O1/mux_r_empty_129_31', 'O/O1/mux_r_pointer_123_5', 
+'O/O1/mux_r_pointer_129_31', 'O/O1/mux_read_en_26_4', 
+'O/O1/mux_read_en_31_27', 'O/O1/mux_rinc_64_4', 'O/O1/mux_rinc_70_28', 
+'O/O1/mux_spi_cs_41_5', 'O/O1/mux_spi_cs_48_25', 'O/O1/mux_w_full_90_11', 
+'O/O1/mux_w_full_98_29', 'O/O1/mux_w_pointer_90_11', 
+'O/O1/mux_w_pointer_98_29', 'O/O1/mux_winc_64_4', 'O/O1/mux_winc_70_28', 
+'O/O1/mux_winc_75_32', 'O/O2/mux_add_byte_99_25', 'O/O2/mux_control_32_4', 
+'O/O2/mux_control_38_33', 'O/O2/mux_control_clk_miso_32_4', 
+'O/O2/mux_data_56_5', 'O/O2/mux_data_66_10', 'O/O2/mux_final_data_56_5', 
+'O/O2/mux_point_56_5', 'O/O2/mux_point_66_10', 'O/O2/mux_point_add_56_5', 
+'O/O2/mux_spi_miso_out_115_6', 'O/O2/mux_spi_miso_out_120_26', 
+'O/O2/mux_spi_mosi_out_66_10', 'O/O2/mux_spi_mosi_out_76_48'.
+Info    : Equivalent sequential instances have been merged. [GLO-42]
+        : Instances 'add_byte_reg[7]' and 'add_byte_reg[5]' in 'control_unit' have been merged.
+        : To prevent merging of sequential instances, set the 'optimize_merge_flops' and 'optimize_merge_latches' root attributes to 'false' or the 'optimize_merge_seq' instance attribute to 'false'.
+Info    : Equivalent sequential instances have been merged. [GLO-42]
+        : Instances 'add_byte_reg[7]' and 'add_byte_reg[4]' in 'control_unit' have been merged.
+Info    : Equivalent sequential instances have been merged. [GLO-42]
+        : Instances 'add_byte_reg[7]' and 'add_byte_reg[2]' in 'control_unit' have been merged.
+Info    : Equivalent sequential instances have been merged. [GLO-42]
+        : Instances 'add_byte_reg[6]' and 'add_byte_reg[3]' in 'control_unit' have been merged.
+Info    : Equivalent sequential instances have been merged. [GLO-42]
+        : Instances 'add_byte_reg[6]' and 'add_byte_reg[1]' in 'control_unit' have been merged.
+Warning : This attribute will be obsolete in a next major release. [TUI-32]
+        : attribute: 'auto_ungroup_ok', object type: 'subdesign'
+        : Kindly use the new attribute 'ungroup_ok' which works across the flow.
+        Trying carrysave optimization (configuration 1 of 1) on module 'spi_miso_csa_cluster'...
+                  Allow CSA over Muxes:      No
+                  Allow CSA over Inverter:   No
+                  Allow Complex CSA:         No
+                  Allow CSA over Truncation: No
+Info    : Done carrysave optimization. [RTLOPT-20]
+        : There is 1 CSA group in module 'spi_miso_csa_cluster'... Accepted.
+        Trying carrysave optimization (configuration 1 of 1) on module 'spi_mosi_csa_cluster_297'...
+                  Allow CSA over Muxes:      No
+                  Allow CSA over Inverter:   No
+                  Allow Complex CSA:         No
+                  Allow CSA over Truncation: No
+Info    : Done carrysave optimization. [RTLOPT-20]
+        : There is 1 CSA group in module 'spi_mosi_csa_cluster_297'... Accepted.
+        Trying carrysave optimization (configuration 1 of 1) on module 'spi_miso_csa_cluster_294'...
+                  Allow CSA over Muxes:      No
+                  Allow CSA over Inverter:   No
+                  Allow Complex CSA:         No
+                  Allow CSA over Truncation: No
+Info    : Done carrysave optimization. [RTLOPT-20]
+        : There is 1 CSA group in module 'spi_miso_csa_cluster_294'... Accepted.
+        Trying carrysave optimization (configuration 1 of 1) on module 'asy_fifo_output_csa_cluster_291'...
+                  Allow CSA over Muxes:      No
+                  Allow CSA over Inverter:   No
+                  Allow Complex CSA:         No
+                  Allow CSA over Truncation: No
+Info    : Done carrysave optimization. [RTLOPT-20]
+        : There is 1 CSA group in module 'asy_fifo_output_csa_cluster_291'... Accepted.
+        Trying carrysave optimization (configuration 1 of 1) on module 'clk_div_csa_cluster_293'...
+                  Allow CSA over Muxes:      No
+                  Allow CSA over Inverter:   No
+                  Allow Complex CSA:         No
+                  Allow CSA over Truncation: No
+Info    : Done carrysave optimization. [RTLOPT-20]
+        : There is 1 CSA group in module 'clk_div_csa_cluster_293'... Accepted.
+        Trying carrysave optimization (configuration 1 of 1) on module 'asy_fifo_input_csa_cluster_290'...
+                  Allow CSA over Muxes:      No
+                  Allow CSA over Inverter:   No
+                  Allow Complex CSA:         No
+                  Allow CSA over Truncation: No
+Info    : Done carrysave optimization. [RTLOPT-20]
+        : There is 1 CSA group in module 'asy_fifo_input_csa_cluster_290'... Accepted.
+        Trying carrysave optimization (configuration 1 of 1) on module 'spi_mosi_csa_cluster'...
+                  Allow CSA over Muxes:      No
+                  Allow CSA over Inverter:   No
+                  Allow Complex CSA:         No
+                  Allow CSA over Truncation: No
+Info    : Done carrysave optimization. [RTLOPT-20]
+        : There is 1 CSA group in module 'spi_mosi_csa_cluster'... Accepted.
+        Trying carrysave optimization (configuration 1 of 1) on module 'spi_mosi_csa_cluster_296'...
+                  Allow CSA over Muxes:      No
+                  Allow CSA over Inverter:   No
+                  Allow Complex CSA:         No
+                  Allow CSA over Truncation: No
+Info    : Done carrysave optimization. [RTLOPT-20]
+        : There is 1 CSA group in module 'spi_mosi_csa_cluster_296'... Accepted.
+        Trying carrysave optimization (configuration 1 of 1) on module 'asy_fifo_input_csa_cluster'...
+                  Allow CSA over Muxes:      No
+                  Allow CSA over Inverter:   No
+                  Allow Complex CSA:         No
+                  Allow CSA over Truncation: No
+Info    : Done carrysave optimization. [RTLOPT-20]
+        : There is 1 CSA group in module 'asy_fifo_input_csa_cluster'... Accepted.
+        Trying carrysave optimization (configuration 1 of 1) on module 'spi_miso_csa_cluster_295'...
+                  Allow CSA over Muxes:      No
+                  Allow CSA over Inverter:   No
+                  Allow Complex CSA:         No
+                  Allow CSA over Truncation: No
+Info    : Done carrysave optimization. [RTLOPT-20]
+        : There is 1 CSA group in module 'spi_miso_csa_cluster_295'... Accepted.
+        Trying carrysave optimization (configuration 1 of 1) on module 'asy_fifo_output_csa_cluster'...
+                  Allow CSA over Muxes:      No
+                  Allow CSA over Inverter:   No
+                  Allow Complex CSA:         No
+                  Allow CSA over Truncation: No
+Info    : Done carrysave optimization. [RTLOPT-20]
+        : There is 1 CSA group in module 'asy_fifo_output_csa_cluster'... Accepted.
+      Timing increment_unsigned_44...
+      Timing increment_unsigned_49...
+      Removing temporary intermediate hierarchies under final_spi
+Info    : Deleting instances not driving any primary outputs. [GLO-32]
+        : Deleting 5 sequential instances. 
+Following instances are deleted as they do not drive any primary output:
+'C/add_byte_reg[1]', 'C/add_byte_reg[2]', 'C/add_byte_reg[3]', 
+'C/add_byte_reg[4]', 'C/add_byte_reg[5]'.
+Info    : Automatically enabling super-threading. [ST-121]
+        : Host 'l10p33.rz.tu-harburg.de' has 4 processors available.
+        : RC is entering super-threading mode because it is running on a multi-processor machine.  Two super-thread servers will be running on 'localhost' and no super-thread licenses will be checked out.  This is enabled by the root attribute 'auto_super_thread'.
+Info    : Launching a super-threading server. [ST-120]
+        : Launching server 1 of 2.
+        : RC is entering super-threading mode and is launching a CPU server process.  This is enabled by the root attribute 'super_thread_servers' or 'auto_super_thread'.
+Info    : Launching a super-threading server. [ST-120]
+        : Launching server 2 of 2.
+Info    : Connection established with super-threading server. [ST-110]
+        : The server is process '1680' in this host.
+        : RC is entering super-threading mode and has established a connection with a CPU server process.  This is enabled by the root attributes 'super_thread_servers' or 'auto_super_thread'.
+Info    : Connection established with super-threading server. [ST-110]
+        : The server is process '1682' in this host.
+        Distributing super-thread jobs: asy_fifo_output asy_fifo_input spi_miso
+          Sending 'asy_fifo_output' to server 'localhost'...
+            Sent 'asy_fifo_output' to server 'localhost'.
+          Sending 'asy_fifo_input' to server 'localhost'...
+            Sent 'asy_fifo_input' to server 'localhost'.
+          Received 'asy_fifo_output' from server localhost. (634 ms elapsed)
+          Sending 'spi_miso' to server 'localhost'...
+            Sent 'spi_miso' to server 'localhost'.
+          Received 'asy_fifo_input' from server localhost. (633 ms elapsed)
+          Received 'spi_miso' from server localhost. (84 ms elapsed)
+Info    : A super-threading server has been shut down normally. [ST-112]
+        : The server was process '1682' in this host.
+        : A super-threaded optimization is complete and a CPU server was successfully shut down.
+Info    : A super-threading server has been shut down normally. [ST-112]
+        : The server was process '1680' in this host.
+        ------------------------------------------------------------
+                            Super-Thread Summary
+          time in super-thread mode               : 0.73 sec
+          foreground process active time          : 0.01 sec
+          background processes total active time  : 1.35 sec
+          approximate speedup                     : 1.87X
+           * reported times are wall-clock (elapsed time),
+             not CPU time
+        ------------------------------------------------------------
+                            Stats from servers
+          servers : localhost localhost
+          memory_usage (Mb) : 81.02 82.91
+        ------------------------------------------------------------
+Info    : Deleting instances not driving any primary outputs. [GLO-32]
+        : Deleting 1 sequential instance. 
+Following instance is deleted as they do not drive any primary output:
+'I/I2/data_reg[7]'.
+Mapping final_spi to gates.
+      Mapping 'final_spi'...
+        Preparing the circuit
+          Pruning unused logic
+Info    : Deleting instances not driving any primary outputs. [GLO-32]
+        : Deleting 17 sequential instances. 
+Following instances are deleted as they do not drive any primary output:
+'I/I1/data_to_mosi_reg[7]', 'I/I1/ex_mem_reg[0][7]', 
+'I/I1/ex_mem_reg[1][7]', 'I/I1/ex_mem_reg[2][7]', 'I/I1/ex_mem_reg[3][7]', 
+'I/I1/ex_mem_reg[4][7]', 'I/I1/ex_mem_reg[5][7]', 'I/I1/ex_mem_reg[6][7]', 
+'I/I1/ex_mem_reg[7][7]', 'I/I1/ex_mem_reg[8][7]', 'I/I1/ex_mem_reg[9][7]', 
+'I/I1/ex_mem_reg[10][7]', 'I/I1/ex_mem_reg[11][7]', 
+'I/I1/ex_mem_reg[12][7]', 'I/I1/ex_mem_reg[13][7]', 
+'I/I1/ex_mem_reg[14][7]', 'I/I1/rdata_reg[7]'.
+Info    : Replacing the synchronous part of an always feeding back flip-flop with a logic constant. [GLO-45]
+        : The instance is 'C/add_byte_reg[0]'. The constant is '0'.
+        : The value used to replace the flop can be set by the root attribute 'optimize_seq_x_to'. The assigned constant might also conflict with the simulation and/or verification setup.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'C/add_byte_reg[6]'.
+        : This optimization was enabled by the root attribute 'optimize_constant_0_flops'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'C/add_byte_reg[0]'.
+Info    : Hierarchical instance automatically ungrouped. [GLO-51]
+        : Instance 'L' in module 'final_spi' would be automatically ungrouped.
+        : Hierarchical instances can be automatically ungrouped to allow for better area or timing optimization. You can control auto ungrouping using the root-level attribute 'auto_ungroup'. You can skip individual instances or modules using the attribute 'ungroup_ok'.
+Info    : Hierarchical instance automatically ungrouped. [GLO-51]
+        : Instance 'A' in module 'spi_final_O' would be automatically ungrouped.
+Info    : Hierarchical instance automatically ungrouped. [GLO-51]
+        : Instance 'B' in module 'spi_final' would be automatically ungrouped.
+Info    : Hierarchical instance automatically ungrouped. [GLO-51]
+        : Instance 'O1' in module 'spi_final_O' would be automatically ungrouped.
+Info    : Hierarchical instance automatically ungrouped. [GLO-51]
+        : Instance 'I1' in module 'spi_final' would be automatically ungrouped.
+Info    : Hierarchical instance automatically ungrouped. [GLO-51]
+        : Instance 'O' in module 'final_spi' would be automatically ungrouped.
+Info    : Hierarchical instance automatically ungrouped. [GLO-51]
+        : Instance 'C' in module 'final_spi' would be automatically ungrouped.
+Info    : Hierarchical instance automatically ungrouped. [GLO-51]
+        : Instance 'I' in module 'final_spi' would be automatically ungrouped.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'O_O2/data_reg[7]'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'O_O2/final_data_reg[7]'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'O_O2/spi_miso_out_reg[7]'.
+Info    : Deleting instances not driving any primary outputs. [GLO-32]
+        : Deleting 5 sequential instances. 
+Following instances are deleted as they do not drive any primary output:
+'C_add_byte_reg[0]', 'C_add_byte_reg[6]', 'O_O2/data_reg[7]', 
+'O_O2/final_data_reg[7]', 'O_O2/spi_miso_out_reg[7]'.
+Info    : Replacing the synchronous part of an always feeding back flip-flop with a logic constant. [GLO-45]
+        : The instance is 'O_O1_ex_mem_reg[0][7]'. The constant is '0'.
+Info    : Replacing the synchronous part of an always feeding back flip-flop with a logic constant. [GLO-45]
+        : The instance is 'O_O1_ex_mem_reg[10][7]'. The constant is '0'.
+Info    : Replacing the synchronous part of an always feeding back flip-flop with a logic constant. [GLO-45]
+        : The instance is 'O_O1_ex_mem_reg[11][7]'. The constant is '0'.
+Info    : Replacing the synchronous part of an always feeding back flip-flop with a logic constant. [GLO-45]
+        : The instance is 'O_O1_ex_mem_reg[12][7]'. The constant is '0'.
+Info    : Replacing the synchronous part of an always feeding back flip-flop with a logic constant. [GLO-45]
+        : The instance is 'O_O1_ex_mem_reg[13][7]'. The constant is '0'.
+Info    : Replacing the synchronous part of an always feeding back flip-flop with a logic constant. [GLO-45]
+        : The instance is 'O_O1_ex_mem_reg[14][7]'. The constant is '0'.
+Info    : Replacing the synchronous part of an always feeding back flip-flop with a logic constant. [GLO-45]
+        : The instance is 'O_O1_ex_mem_reg[1][7]'. The constant is '0'.
+Info    : Replacing the synchronous part of an always feeding back flip-flop with a logic constant. [GLO-45]
+        : The instance is 'O_O1_ex_mem_reg[2][7]'. The constant is '0'.
+Info    : Replacing the synchronous part of an always feeding back flip-flop with a logic constant. [GLO-45]
+        : The instance is 'O_O1_ex_mem_reg[3][7]'. The constant is '0'.
+Info    : Replacing the synchronous part of an always feeding back flip-flop with a logic constant. [GLO-45]
+        : The instance is 'O_O1_ex_mem_reg[4][7]'. The constant is '0'.
+Info    : Replacing the synchronous part of an always feeding back flip-flop with a logic constant. [GLO-45]
+        : The instance is 'O_O1_ex_mem_reg[5][7]'. The constant is '0'.
+Info    : Replacing the synchronous part of an always feeding back flip-flop with a logic constant. [GLO-45]
+        : The instance is 'O_O1_ex_mem_reg[6][7]'. The constant is '0'.
+Info    : Replacing the synchronous part of an always feeding back flip-flop with a logic constant. [GLO-45]
+        : The instance is 'O_O1_ex_mem_reg[7][7]'. The constant is '0'.
+Info    : Replacing the synchronous part of an always feeding back flip-flop with a logic constant. [GLO-45]
+        : The instance is 'O_O1_ex_mem_reg[8][7]'. The constant is '0'.
+Info    : Replacing the synchronous part of an always feeding back flip-flop with a logic constant. [GLO-45]
+        : The instance is 'O_O1_ex_mem_reg[9][7]'. The constant is '0'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'O_O1_ex_mem_reg[0][7]'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'O_O1_ex_mem_reg[10][7]'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'O_O1_ex_mem_reg[11][7]'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'O_O1_ex_mem_reg[12][7]'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'O_O1_ex_mem_reg[13][7]'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'O_O1_ex_mem_reg[14][7]'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'O_O1_ex_mem_reg[1][7]'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'O_O1_ex_mem_reg[2][7]'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'O_O1_ex_mem_reg[3][7]'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'O_O1_ex_mem_reg[4][7]'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'O_O1_ex_mem_reg[5][7]'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'O_O1_ex_mem_reg[6][7]'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'O_O1_ex_mem_reg[7][7]'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'O_O1_ex_mem_reg[8][7]'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'O_O1_ex_mem_reg[9][7]'.
+Info    : Deleting instances not driving any primary outputs. [GLO-32]
+        : Deleting 15 sequential instances. 
+Following instances are deleted as they do not drive any primary output:
+'O_O1_ex_mem_reg[0][7]', 'O_O1_ex_mem_reg[1][7]', 'O_O1_ex_mem_reg[2][7]', 
+'O_O1_ex_mem_reg[3][7]', 'O_O1_ex_mem_reg[4][7]', 'O_O1_ex_mem_reg[5][7]', 
+'O_O1_ex_mem_reg[6][7]', 'O_O1_ex_mem_reg[7][7]', 'O_O1_ex_mem_reg[8][7]', 
+'O_O1_ex_mem_reg[9][7]', 'O_O1_ex_mem_reg[10][7]', 
+'O_O1_ex_mem_reg[11][7]', 'O_O1_ex_mem_reg[12][7]', 
+'O_O1_ex_mem_reg[13][7]', 'O_O1_ex_mem_reg[14][7]'.
+Info    : Equivalent sequential instances have been merged. [GLO-42]
+        : Instances 'O_O1_data_out_reg[103]' and 'O_O1_data_out_reg[111]' in 'final_spi' have been merged.
+Info    : Equivalent sequential instances have been merged. [GLO-42]
+        : Instances 'O_O1_data_out_reg[103]' and 'O_O1_data_out_reg[119]' in 'final_spi' have been merged.
+Info    : Equivalent sequential instances have been merged. [GLO-42]
+        : Instances 'O_O1_data_out_reg[103]' and 'O_O1_data_out_reg[15]' in 'final_spi' have been merged.
+Info    : Equivalent sequential instances have been merged. [GLO-42]
+        : Instances 'O_O1_data_out_reg[103]' and 'O_O1_data_out_reg[23]' in 'final_spi' have been merged.
+Info    : Equivalent sequential instances have been merged. [GLO-42]
+        : Instances 'O_O1_data_out_reg[103]' and 'O_O1_data_out_reg[31]' in 'final_spi' have been merged.
+Info    : Equivalent sequential instances have been merged. [GLO-42]
+        : Instances 'O_O1_data_out_reg[103]' and 'O_O1_data_out_reg[39]' in 'final_spi' have been merged.
+Info    : Equivalent sequential instances have been merged. [GLO-42]
+        : Instances 'O_O1_data_out_reg[103]' and 'O_O1_data_out_reg[47]' in 'final_spi' have been merged.
+Info    : Equivalent sequential instances have been merged. [GLO-42]
+        : Instances 'O_O1_data_out_reg[103]' and 'O_O1_data_out_reg[55]' in 'final_spi' have been merged.
+Info    : Equivalent sequential instances have been merged. [GLO-42]
+        : Instances 'O_O1_data_out_reg[103]' and 'O_O1_data_out_reg[63]' in 'final_spi' have been merged.
+Info    : Equivalent sequential instances have been merged. [GLO-42]
+        : Instances 'O_O1_data_out_reg[103]' and 'O_O1_data_out_reg[71]' in 'final_spi' have been merged.
+Info    : Equivalent sequential instances have been merged. [GLO-42]
+        : Instances 'O_O1_data_out_reg[103]' and 'O_O1_data_out_reg[79]' in 'final_spi' have been merged.
+Info    : Equivalent sequential instances have been merged. [GLO-42]
+        : Instances 'O_O1_data_out_reg[103]' and 'O_O1_data_out_reg[7]' in 'final_spi' have been merged.
+Info    : Equivalent sequential instances have been merged. [GLO-42]
+        : Instances 'O_O1_data_out_reg[103]' and 'O_O1_data_out_reg[87]' in 'final_spi' have been merged.
+Info    : Equivalent sequential instances have been merged. [GLO-42]
+        : Instances 'O_O1_data_out_reg[103]' and 'O_O1_data_out_reg[95]' in 'final_spi' have been merged.
+Info    : Deleting instances not driving any primary outputs. [GLO-32]
+        : Deleting 14 sequential instances. 
+Following instances are deleted as they do not drive any primary output:
+'O_O1_data_out_reg[7]', 'O_O1_data_out_reg[15]', 'O_O1_data_out_reg[23]', 
+'O_O1_data_out_reg[31]', 'O_O1_data_out_reg[39]', 'O_O1_data_out_reg[47]', 
+'O_O1_data_out_reg[55]', 'O_O1_data_out_reg[63]', 'O_O1_data_out_reg[71]', 
+'O_O1_data_out_reg[79]', 'O_O1_data_out_reg[87]', 'O_O1_data_out_reg[95]', 
+'O_O1_data_out_reg[111]', 'O_O1_data_out_reg[119]'.
+Info    : Replacing a latch with a logic constant 0. [GLO-14]
+        : The instance is 'O_O1_data_out_reg[103]'.
+        : This optimization was enabled by the root attribute 'optimize_constant_latches'.
+Info    : Equivalent sequential instances have been merged. [GLO-42]
+        : Instances 'L_spi_clk_reg' and 'O_A_spi_clk_reg' in 'final_spi' have been merged.
+Info    : Equivalent sequential instances have been merged. [GLO-42]
+        : Instances 'L_counter_reg[0]' and 'O_A_counter_reg[0]' in 'final_spi' have been merged.
+Info    : Equivalent sequential instances have been merged. [GLO-42]
+        : Instances 'L_counter_reg[1]' and 'O_A_counter_reg[1]' in 'final_spi' have been merged.
+Info    : Equivalent sequential instances have been merged. [GLO-42]
+        : Instances 'L_counter_reg[2]' and 'O_A_counter_reg[2]' in 'final_spi' have been merged.
+Info    : Equivalent sequential instances have been merged. [GLO-42]
+        : Instances 'L_counter_reg[3]' and 'O_A_counter_reg[3]' in 'final_spi' have been merged.
+          Analyzing hierarchical boundaries
+          Propagating constants
+Info    : Deleting instances not driving any primary outputs. [GLO-32]
+        : Deleting 5 sequential instances. 
+Following instances are deleted as they do not drive any primary output:
+'O_A_counter_reg[0]', 'O_A_counter_reg[1]', 'O_A_counter_reg[2]', 
+'O_A_counter_reg[3]', 'O_A_spi_clk_reg'.
+        Done preparing the circuit
+Info    : Automatically enabling super-threading. [ST-121]
+        : Host 'l10p33.rz.tu-harburg.de' has 4 processors available.
+Info    : Launching a super-threading server. [ST-120]
+        : Launching server 1 of 2.
+Info    : Launching a super-threading server. [ST-120]
+        : Launching server 2 of 2.
+Info    : Connection established with super-threading server. [ST-110]
+        : The server is process '1761' in this host.
+Info    : Connection established with super-threading server. [ST-110]
+        : The server is process '1763' in this host.
+          Structuring (delay-based) final_spi...
+          Done structuring (delay-based) final_spi
+          Structuring (delay-based) spi_mosi...
+            Starting partial collapsing (xors only) spi_mosi
+            Finished partial collapsing.
+            Starting partial collapsing  spi_mosi
+            Finished partial collapsing.
+            Performing redundancy-removal...
+            Performing redundancy-removal...
+          Done structuring (delay-based) spi_mosi
+        Mapping component spi_mosi...
+        Distributing super-thread jobs: cb_oseq_450
+          Sending 'cb_oseq_450' to server 'localhost'...
+            Sent 'cb_oseq_450' to server 'localhost'.
+          Structuring (delay-based) cb_oseq_450...
+            Starting partial collapsing  cb_oseq_450
+            Finished partial collapsing.
+            Performing redundancy-removal...
+          Done structuring (delay-based) cb_oseq_450
+        Mapping component cb_oseq_450...
+          Received 'cb_oseq_450' from server localhost. (515 ms elapsed)
+          Structuring (delay-based) logic partition in spi_miso...
+            Starting partial collapsing (xors only) cb_seq
+            Finished partial collapsing.
+            Starting partial collapsing  cb_seq
+            Finished partial collapsing.
+            Performing redundancy-removal...
+            Performing redundancy-removal...
+          Done structuring (delay-based) logic partition in spi_miso
+        Mapping logic partition in spi_miso...
+          Structuring (delay-based) logic partition in spi_miso...
+          Done structuring (delay-based) logic partition in spi_miso
+        Mapping logic partition in spi_miso...
+        Distributing super-thread jobs: cb_seq_451
+          Sending 'cb_seq_451' to server 'localhost'...
+            Sent 'cb_seq_451' to server 'localhost'.
+          Structuring (delay-based) cb_seq_451...
+            Starting partial collapsing (xors only) cb_seq_451
+            Finished partial collapsing.
+            Starting partial collapsing  cb_seq_451
+            Finished partial collapsing.
+            Performing redundancy-removal...
+          Done structuring (delay-based) cb_seq_451
+        Mapping component cb_seq_451...
+          Received 'cb_seq_451' from server localhost. (724 ms elapsed)
+ 
+Global mapping target info
+==========================
+Cost Group 'default' target slack:  1500 ps
+Target path end-point (Pin: I_I1_ex_mem_reg[12][5]/d)
+
+Warning : Possible timing problems have been detected in this design. [TIM-11]
+        : The design is 'final_spi'.
+        : Use 'report timing -lint' for more information.
+            Pin                        Type          Fanout  Load Arrival   
+                                                             (fF)   (ps)    
+----------------------------------------------------------------------------
+(clock Mclk)                 <<<  launch                                0 R 
+cb_seqi
+  I_I1_w_pointer_reg[1]/clk                                                 
+  I_I1_w_pointer_reg[1]/q    (u)  unmapped_d_flop         6 113.4           
+  g1518/in_1                                                                
+  g1518/z                    (u)  unmapped_nand2          4  75.6           
+  g1675/in_1                                                                
+  g1675/z                    (u)  unmapped_complex2       3  56.7           
+  g1845/in_0                                                                
+  g1845/z                    (u)  unmapped_or2            1  18.9           
+  g2596/in_0                                                                
+  g2596/z                    (u)  unmapped_nand2          2  56.7           
+  g2470/in_1                                                                
+  g2470/z                    (u)  unmapped_complex2       4  75.6           
+  g2456/in_1                                                                
+  g2456/z                    (u)  unmapped_or2            3  56.7           
+  g2340/in_1                                                                
+  g2340/z                    (u)  unmapped_or2            2  37.8           
+  g2297/in_0                                                                
+  g2297/z                    (u)  unmapped_complex2       2  37.8           
+  g2769/in_0                                                                
+  g2769/z                    (u)  unmapped_complex2       7  75.6           
+  g2774/sel0                                                                
+  g2774/z                    (u)  unmapped_bmux3          1  18.9           
+  I_I1_ex_mem_reg[12][5]/d   <<<  unmapped_d_flop                           
+  I_I1_ex_mem_reg[12][5]/clk      setup                                     
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+(clock Mclk)                      capture                           50000 R 
+----------------------------------------------------------------------------
+Start-point  : cb_seqi/I_I1_w_pointer_reg[1]/clk
+End-point    : cb_seqi/I_I1_ex_mem_reg[12][5]/d
+
+(u) : Net has unmapped pin(s).
+
+The global mapper estimates a slack for this path of 33118ps.
+ 
+        Distributing super-thread jobs: cb_seq_451
+          Sending 'cb_seq_451' to server 'localhost'...
+            Sent 'cb_seq_451' to server 'localhost'.
+          Restructuring (delay-based) cb_seq_451...
+          Done restructuring (delay-based) cb_seq_451
+        Optimizing component cb_seq_451...
+          Received 'cb_seq_451' from server localhost. (1655 ms elapsed)
+          Restructuring (delay-based) logic partition in spi_miso...
+          Done restructuring (delay-based) logic partition in spi_miso
+        Optimizing logic partition in spi_miso...
+          Restructuring (delay-based) logic partition in spi_miso...
+          Done restructuring (delay-based) logic partition in spi_miso
+        Optimizing logic partition in spi_miso...
+        Distributing super-thread jobs: cb_oseq_450
+          Sending 'cb_oseq_450' to server 'localhost'...
+            Sent 'cb_oseq_450' to server 'localhost'.
+          Restructuring (delay-based) cb_oseq_450...
+          Done restructuring (delay-based) cb_oseq_450
+        Optimizing component cb_oseq_450...
+          Received 'cb_oseq_450' from server localhost. (293 ms elapsed)
+        Distributing super-thread jobs: spi_mosi
+          Sending 'spi_mosi' to server 'localhost'...
+            Sent 'spi_mosi' to server 'localhost'.
+          Restructuring (delay-based) spi_mosi...
+          Done restructuring (delay-based) spi_mosi
+        Optimizing component spi_mosi...
+          Received 'spi_mosi' from server localhost. (186 ms elapsed)
+ 
+Global mapping timing result
+============================
+        Tracing clock networks.
+        Levelizing the circuit.
+        Applying wireload models.
+        Computing net loads.
+        Computing delays.
+        Computing arrivals and requireds.
+Warning : Possible timing problems have been detected in this design. [TIM-11]
+        : The design is 'final_spi'.
+          Pin                  Type     Fanout  Load Slew Delay Arrival   
+                                                (fF) (ps)  (ps)   (ps)    
+--------------------------------------------------------------------------
+(clock Mclk)                   launch                                 0 R 
+cb_seqi
+  I_I1_w_pointer_reg[2]/C                               0             0 R 
+  I_I1_w_pointer_reg[2]/Q      DFC3          5  91.8  342  +789     789 F 
+  g5472/B                                                    +0     789   
+  g5472/Q                      NAND22        5  94.8  780  +385    1174 R 
+  g5449/B                                                    +0    1174   
+  g5449/Q                      NOR21         3  53.5  557  +327    1502 F 
+  g5358/C                                                    +0    1502   
+  g5358/Q                      AOI311        2  39.3  812  +373    1875 R 
+  g5280/A                                                    +0    1875   
+  g5280/Q                      NAND22        5 103.8  485  +227    2102 F 
+  g5225/C                                                    +0    2102   
+  g5225/Q                      NOR31         3  69.5 1078  +499    2601 R 
+  g5224/A                                                    +0    2602   
+  g5224/Q                      INV3          2  34.3  320  +103    2705 F 
+  g5085/A                                                    +0    2705   
+  g5085/Q                      NOR21         7 113.2 1551  +686    3391 R 
+  I_I1_ex_mem_reg[0][0]/E <<<  DFE1                          +0    3392   
+  I_I1_ex_mem_reg[0][0]/C      setup                    0  +229    3620 R 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+(clock Mclk)                   capture                            50000 R 
+--------------------------------------------------------------------------
+Timing slack :   46380ps 
+Start-point  : cb_seqi/I_I1_w_pointer_reg[2]/C
+End-point    : cb_seqi/I_I1_ex_mem_reg[0][0]/E
+
+ 
+ 
+Global mapping status
+=====================
+                          Worst 
+                 Total  Weighted
+Operation         Area  Neg Slk Worst Path
+-------------------------------------------------------------------------------
+ global_map     180319        0  N/A
+ 
+Global incremental target info
+==============================
+Cost Group 'default' target slack:   995 ps
+Target path end-point (Pin: I_I1_ex_mem_reg[8][3]/E (DFE1/E))
+
+Warning : Possible timing problems have been detected in this design. [TIM-11]
+        : The design is 'final_spi'.
+          Pin                  Type     Fanout  Load Arrival   
+                                                (fF)   (ps)    
+---------------------------------------------------------------
+(clock Mclk)              <<<  launch                      0 R 
+cb_seqi
+  I_I1_w_pointer_reg[2]/C                                      
+  I_I1_w_pointer_reg[2]/Q      DFC3          5  91.8           
+  g5472/B                                                      
+  g5472/Q                      NAND22        5  94.8           
+  g5449/B                                                      
+  g5449/Q                      NOR21         3  53.5           
+  g5358/C                                                      
+  g5358/Q                      AOI311        2  39.3           
+  g5280/A                                                      
+  g5280/Q                      NAND22        5 103.8           
+  g5225/C                                                      
+  g5225/Q                      NOR31         3  69.5           
+  g5224/A                                                      
+  g5224/Q                      INV3          2  34.3           
+  g5087/A                                                      
+  g5087/Q                      NOR21         7 113.2           
+  I_I1_ex_mem_reg[8][3]/E <<<  DFE1                            
+  I_I1_ex_mem_reg[8][3]/C      setup                           
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+(clock Mclk)                   capture                 50000 R 
+---------------------------------------------------------------
+Start-point  : cb_seqi/I_I1_w_pointer_reg[2]/C
+End-point    : cb_seqi/I_I1_ex_mem_reg[8][3]/E
+
+The global mapper estimates a slack for this path of 32464ps.
+ 
+ 
+Global incremental timing result
+================================
+        Tracing clock networks.
+        Levelizing the circuit.
+        Applying wireload models.
+        Computing net loads.
+        Computing delays.
+        Computing arrivals and requireds.
+Warning : Possible timing problems have been detected in this design. [TIM-11]
+        : The design is 'final_spi'.
+          Pin                  Type     Fanout  Load Slew Delay Arrival   
+                                                (fF) (ps)  (ps)   (ps)    
+--------------------------------------------------------------------------
+(clock Mclk)                   launch                                 0 R 
+cb_seqi
+  I_I1_w_pointer_reg[2]/C                               0             0 R 
+  I_I1_w_pointer_reg[2]/Q      DFC3          5  91.8  342  +789     789 F 
+  g5472/B                                                    +0     789   
+  g5472/Q                      NAND22        5  94.8  780  +385    1174 R 
+  g5449/B                                                    +0    1174   
+  g5449/Q                      NOR21         3  53.5  554  +327    1502 F 
+  g5358/C                                                    +0    1502   
+  g5358/Q                      AOI311        2  39.3  810  +373    1874 R 
+  g5280/A                                                    +0    1875   
+  g5280/Q                      NAND22        5 103.8  485  +227    2101 F 
+  g5225/C                                                    +0    2101   
+  g5225/Q                      NOR31         3  69.5 1078  +499    2601 R 
+  g5224/A                                                    +0    2601   
+  g5224/Q                      INV3          2  34.3  320  +103    2704 F 
+  g5085/A                                                    +0    2704   
+  g5085/Q                      NOR21         7 113.2 1551  +686    3391 R 
+  I_I1_ex_mem_reg[0][0]/E <<<  DFE1                          +0    3391   
+  I_I1_ex_mem_reg[0][0]/C      setup                    0  +229    3620 R 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+(clock Mclk)                   capture                            50000 R 
+--------------------------------------------------------------------------
+Timing slack :   46380ps 
+Start-point  : cb_seqi/I_I1_w_pointer_reg[2]/C
+End-point    : cb_seqi/I_I1_ex_mem_reg[0][0]/E
+
+ 
+ 
+Global incremental optimization status
+======================================
+                          Worst 
+                 Total  Weighted
+Operation         Area  Neg Slk Worst Path
+-------------------------------------------------------------------------------
+ global_inc     178094        0  N/A
+
+Scan mapping status report
+==========================
+    Scan mapping: converting flip-flops that pass TDRC.
+    Scan mapping: bypassed.  You have to either 1) set attribute 'dft_scan_map_mode' to 'tdrc_pass' and run 'check_dft_rules' or 2) set attribute 'dft_scan_map_mode' to 'force_all'.
+
+    Scan mapping bypassed because no TDRC data is available: either command 'check_dft_rules' has not been run or TDRC data has been subsequently invalidated.
+Info    : A super-threading server has been shut down normally. [ST-112]
+        : The server was process '1763' in this host.
+Info    : A super-threading server has been shut down normally. [ST-112]
+        : The server was process '1761' in this host.
+        ------------------------------------------------------------
+                            Super-Thread Summary
+          time in super-thread mode               : 4.45 sec
+          foreground process active time          : 0.84 sec
+          background processes total active time  : 3.61 sec
+          approximate speedup                     : 1.00X
+           * reported times are wall-clock (elapsed time),
+             not CPU time
+        ------------------------------------------------------------
+                            Stats from servers
+          servers : localhost localhost
+          memory_usage (Mb) : 88.16 79.04
+        ------------------------------------------------------------
+Info    : 'Conformal LEC11.1-p100' or later builds is recommended for verification. [WDO-600]
+        : The use of 'Conformal LEC11.1-p100' or later builds is recommended to get better verification results.
+Generating a dofile for design 'final_spi' in file 'fv/final_spi/rtl_to_g1.do' ...
+Info    : 'Conformal LEC11.1-p100' or later builds is recommended for verification. [WDO-600]
+Generating a dofile for design 'final_spi' in file 'fv/final_spi/rtl_to_g1_withoutovf.do' ...
+ 
+Incremental optimization status
+===============================
+                          Worst - - DRC Totals - -
+                 Total  Weighted    Max       Max 
+Operation         Area  Neg Slk    Trans      Cap 
+-------------------------------------------------------------------------------
+ init_iopt      178094        0         0        0
+ 
+Incremental optimization status (pre-loop)
+==========================================
+                          Worst - - DRC Totals - -
+                 Total  Weighted    Max       Max 
+Operation         Area  Neg Slk    Trans      Cap 
+-------------------------------------------------------------------------------
+ simp_cc_in     177695        0         0        0
+ hi_fo_buf      177695        0         0        0
+ 
+Incremental optimization status
+===============================
+                          Worst - - DRC Totals - -
+                 Total  Weighted    Max       Max 
+Operation         Area  Neg Slk    Trans      Cap 
+-------------------------------------------------------------------------------
+ init_delay     177695        0         0        0
+ init_drc       177695        0         0        0
+ init_area      177695        0         0        0
+ merge_bi       177650        0         0        0
+ rem_inv_qb     172519        0         0        0
+ gate_comp      172401        0         0        0
+ glob_area      172365        0         0        0
+ 
+Incremental optimization status
+===============================
+                          Worst - - DRC Totals - -
+                 Total  Weighted    Max       Max 
+Operation         Area  Neg Slk    Trans      Cap 
+-------------------------------------------------------------------------------
+ init_delay     172365        0         0        0
+ init_drc       172365        0         0        0
+ init_area      172365        0         0        0
+ 
+Incremental optimization status
+===============================
+                          Worst - - DRC Totals - -
+                 Total  Weighted    Max       Max 
+Operation         Area  Neg Slk    Trans      Cap 
+-------------------------------------------------------------------------------
+ init_delay     172365        0         0        0
+ init_drc       172365        0         0        0
+
+  Done mapping final_spi
+  Synthesis succeeded.
+        Tracing clock networks.
+        Levelizing the circuit.
+        Applying wireload models.
+        Computing net loads.
+        Computing delays.
+        Computing arrivals and requireds.
+Warning : Possible timing problems have been detected in this design. [TIM-11]
+        : The design is 'final_spi'.
+        Initializing DRC engine.
+Finished SDC export (command execution time mm:ss (real) = 00:00).
+Warning : Default value for an option has changed in this release. [WSDF-104]
+        : Default value for -setuphold has changed from split to merge_always. Specify '-setuphold split' to preserve the behavior of the previous release.
+        : Specify the option explicitly.
+Warning : Default value for an option has changed in this release. [WSDF-104]
+        : Default value for -recrem has changed from split to merge_always. Specify '-recrem split' to preserve the behavior of the previous release.
+rc:/> exit
+Normal exit.

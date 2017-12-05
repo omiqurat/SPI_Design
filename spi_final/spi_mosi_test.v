@@ -1,0 +1,96 @@
+`timescale 1 ns / 1 ps
+
+
+
+module spi_mosi_test;
+  
+ 
+reg n_reset;
+reg [7:0] spi_mosi_in;
+ reg  spi_clk,spi_cs;
+ wire  control_clk;
+ wire spi_mosi_out;
+
+//`define stim #10 wdata=8'd
+event end_first_pass;
+
+	spi_mosi A(control_clk,spi_mosi_out,spi_cs,spi_clk,,n_reset,spi_mosi_in);
+
+	
+/*
+initial begin
+  $shm_open("spi_mosi.shm");
+  $shm_probe("AS");
+end
+
+*/
+initial begin
+$dumpfile("spi_mosi_waveform_result.vcd");
+$dumpvars(0,spi_mosi_test);
+end
+initial
+begin
+    n_reset=1;
+    
+     spi_clk=0;
+     spi_cs=1;
+
+
+end
+
+
+
+always  #50 spi_clk= ~spi_clk;
+always
+begin
+#50 ;
+$display ("at time %0d spi_clk = %b   spi_cs= %b  control_clk=%b n_reset=%b spi_mosi_in=%b spi_mosi_out=%b  ", $time,      
+   spi_clk,spi_cs,control_clk,n_reset,spi_mosi_in,spi_mosi_out);
+
+end
+initial
+begin
+#150 n_reset=0;
+
+#150 n_reset=1;
+ spi_mosi_in=8'd0;
+ #250  
+spi_cs=0;    
+      spi_mosi_in=8'd1;
+ 
+    #1500 spi_mosi_in =8'd2;
+   
+    #1500 spi_mosi_in =8'd3;
+    #1500  spi_mosi_in =8'd4;
+    #1500 spi_mosi_in=8'd5;
+ 
+    #1500 spi_mosi_in =8'd6;
+   
+    #1500 spi_mosi_in =8'd7;
+    #1500  spi_mosi_in =8'd8;
+    #1500 spi_mosi_in=8'd9;
+ 
+   #1500 spi_mosi_in =8'd10;
+   
+    #1500 spi_mosi_in =8'b01000111;
+   #1500 spi_mosi_in =8'b01100001;
+#1500 spi_mosi_in=8'd1;
+ 
+    #1500 spi_mosi_in =8'b00100011;
+   
+   
+	//#1700 spi_mosi_in=8'b11001010;
+	
+	
+	
+	
+	#100000->end_first_pass;
+   $finish;
+   end
+
+
+endmodule
+	
+	
+	
+ 

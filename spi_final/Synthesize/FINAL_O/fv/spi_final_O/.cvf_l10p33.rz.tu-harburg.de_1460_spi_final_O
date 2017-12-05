@@ -1,0 +1,115 @@
+#Copyright notice: Copyright 1997-2010 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+
+ovf_setup -ungroup_separator { _ }
+
+ovf_instance_module_name -module spi_final_O \
+{ { O2 spi_miso spi_miso } }
+ovf_instance_module_name -module spi_final_O \
+{ { O1 asy_fifo_output asy_fifo_output } }
+ovf_seq_merge \
+-module { spi_miso } \
+-from { { add_byte_reg[0] P } { add_byte_reg[2] P } { add_byte_reg[5] P } { add_byte_reg[6] P } { add_byte_reg[7] P } } \
+-to { { add_byte_reg[0] } }
+
+ovf_seq_merge \
+-module { spi_miso } \
+-from { { add_byte_reg[1] P } { add_byte_reg[3] P } { add_byte_reg[4] P } } \
+-to { { add_byte_reg[1] } }
+
+ovf_transform \
+-module { clk_div } \
+-type { tree } \
+-internal_type { 206 } \
+-internal_index { 25 } \
+-input { 4 add_24_25.A } \
+-output { 4 O1 } \
+-from { \
+   { 4 add_24_25 : UADD { { add_24_25.A } { 'b1 ZERO 4 } } } \
+   { O1 = { add_24_25.1 } } } \
+-to { \
+   { 4 inc_add_24_25_1 : UINC { { add_24_25.A } { 'b1 ZERO 4 } } } \
+   { O1 = { inc_add_24_25_1.1 } } }
+
+ovf_transform \
+-module { asy_fifo_output } \
+-type { tree } \
+-internal_type { 206 } \
+-internal_index { 26 } \
+-input { 4 add_138_74.A } \
+-output { 4 O1 } \
+-from { \
+   { 4 add_138_74 : UADD { { add_138_74.A } { 'b1 ZERO 4 } } } \
+   { O1 = { add_138_74.1 } } } \
+-to { \
+   { 4 inc_add_138_74_2 : UINC { { add_138_74.A } { 'b1 ZERO 4 } } } \
+   { O1 = { inc_add_138_74_2.1 } } }
+
+ovf_transform \
+-module { spi_miso } \
+-type { tree } \
+-internal_type { 206 } \
+-internal_index { 27 } \
+-input { 3 add_46_40.A } \
+-output { 3 O1 } \
+-from { \
+   { 3 add_46_40 : UADD { { add_46_40.A } { 'b1 ZERO 3 } } } \
+   { O1 = { add_46_40.1 } } } \
+-to { \
+   { 3 inc_add_46_40_3 : UINC { { add_46_40.A } { 'b1 ZERO 3 } } } \
+   { O1 = { inc_add_46_40_3.1 } } }
+
+ovf_transform \
+-module { spi_miso } \
+-type { tree } \
+-internal_type { 206 } \
+-internal_index { 28 } \
+-input { 3 add_104_33.A } \
+-output { 3 O1 } \
+-from { \
+   { 3 add_104_33 : UADD { { add_104_33.A } { 'b1 ZERO 3 } } } \
+   { O1 = { add_104_33.1 } } } \
+-to { \
+   { 3 inc_add_104_33_4 : UINC { { add_104_33.A } { 'b1 ZERO 3 } } } \
+   { O1 = { inc_add_104_33_4.1 } } }
+
+ovf_transform \
+-module { spi_miso } \
+-type { tree } \
+-internal_type { 206 } \
+-internal_index { 29 } \
+-input { 3 add_91_35.A } \
+-output { 3 O1 } \
+-from { \
+   { 3 add_91_35 : UADD { { add_91_35.A } { 'b1 ZERO 3 } } } \
+   { O1 = { add_91_35.1 } } } \
+-to { \
+   { 3 inc_add_91_35_5 : UINC { { add_91_35.A } { 'b1 ZERO 3 } } } \
+   { O1 = { inc_add_91_35_5.1 } } }
+
+ovf_transform \
+-module { asy_fifo_output } \
+-type { tree } \
+-internal_type { 206 } \
+-internal_index { 30 } \
+-input { 4 add_106_74.A } \
+-output { 4 O1 } \
+-from { \
+   { 4 add_106_74 : UADD { { add_106_74.A } { 'b1 ZERO 4 } } } \
+   { O1 = { add_106_74.1 } } } \
+-to { \
+   { 4 inc_add_106_74_6 : UINC { { add_106_74.A } { 'b1 ZERO 4 } } } \
+   { O1 = { inc_add_106_74_6.1 } } }
+
+ovf_ungroup \
+-module { spi_final_O } \
+-insmod { spi_miso } \
+-instance { O2 } 
+ovf_ungroup \
+-module { spi_final_O } \
+-insmod { asy_fifo_output } \
+-instance { O1 } 
+ovf_ungroup \
+-module { spi_final_O } \
+-insmod { clk_div } \
+-instance { A } 

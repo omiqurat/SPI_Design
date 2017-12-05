@@ -1,0 +1,106 @@
+*** Message Type: info ***
+When: Mon Jul 04 15:56:38 CEST 2016
+SimVision started.
+Version: TOOL:  simvision(64)   12.10-s005
+User: c00cds01
+Host: l06p31.rz.tu-harburg.de
+Platform: Linux/x86_64/2.6.32-642.1.1.el6.x86_64
+Started: Mon Jul 04 15:56:38 CEST 2016
+Command: /cds/2013/INCISIV121/tools.lnx86/simvision/bin/64bit/simvision.exe spi_mosi.shm
+Work Directory: /fibus/fs3/18/c00cds01/Md_Rahat/Digital lab/SPI/spi_final
+ 
+*** Message Type: info ***
+When: Mon Jul 04 15:56:39 CEST 2016
+Create browser window: "Design Browser 1"
+ 
+*** Message Type: info ***
+When: Mon Jul 04 15:56:41 CEST 2016
+Create console window: "Console"
+ 
+*** Message Type: info ***
+When: Mon Jul 04 15:56:45 CEST 2016
+Create utility window: "Properties"
+ 
+*** Message Type: info ***
+When: Mon Jul 04 15:57:01 CEST 2016
+Create waveform window: "Waveform 1"
+ 
+*** Message Type: info ***
+When: Mon Jul 04 16:00:57 CEST 2016
+Create source window: "Source Browser 1"
+ 
+*** Message Type: info ***
+When: Mon Jul 04 16:01:01 CEST 2016
+Delete source window: "Source Browser 1"
+ 
+*** Message Type: error ***
+When: Mon Jul 04 16:01:01 CEST 2016
+invalid command name "historyList3"
+    while executing
+"$_history size"
+    ("update-history" arm line 5)
+    invoked from within
+"switch -- $op {
+        post-prev {
+        # post-prev <widget>
+           _simpleHistory fill-menu [lindex $args 0] "-"  [$_history get listprev]
+    }
+      post-next {
+     ..."
+    (method "::TraceSignalsSidebar::_simpleHistory" body line 9)
+    invoked from within
+"_simpleHistory update-history"
+    (method "::TraceSignalsSidebar::_doSimpleTrace" body line 53)
+    invoked from within
+"_doSimpleTrace $direction -handle $signalH -time $time"
+    (method "::TraceSignalsSidebar::traceSignal" body line 28)
+    invoked from within
+"$tsSbr traceSignal $direction $dacH -jumpEdge $jumpEdge"
+    ("driver" arm line 9)
+    invoked from within
+"switch -- $direction {
+   driver - load {
+            set jumpEdge 0
+         if {$direction == "driver"} {
+              set jumpEdge 1
+     }
+      set tsSbr [sidebar access ..."
+    (method "::SrcBrowser::traceSignal" body line 3)
+    invoked from within
+"$srcb traceSignal driver $traceH"
+    (object "::windows" method "::Windows::showsource" body line 70)
+    invoked from within
+"# Compiled -- no source code available
+error "called a copy of a compiled script""
+    (procedure "util::doCause" line 1)
+    invoked from within
+"util::doCause $hndl -time $time -marker $itk_option(-markerprimary)"
+    (object "::.waveWindow0" method "::WaveWindow::_doGotoCause" body line 52)
+    invoked from within
+"_doGotoCause $cnode"
+    ("@goto-cause" arm line 2)
+    invoked from within
+"switch -glob -- $dclickpref {
+        @no-action {
+               # Do nothing
+       }
+            @goto-cause {
+                _doGotoCause $cnode
+            }
+           ..."
+    (object "::.waveWindow0" method "::WaveWindow::_moveCursor" body line 266)
+    invoked from within
+"::.waveWindow0 _moveCursor cursor 503 153 -double"
+    (in namespace inscope "::WaveWindow" script line 1)
+    invoked from within
+"namespace inscope ::WaveWindow {::.waveWindow0 _moveCursor cursor 503 153 -double}"
+    (command bound to event)
+ 
+*** Message Type: info ***
+When: Mon Jul 04 16:03:44 CEST 2016
+Delete waveform window: "Waveform 1"
+ 
+*** Message Type: info ***
+When: Mon Jul 04 16:03:52 CEST 2016
+SimVision Exit.
+ 

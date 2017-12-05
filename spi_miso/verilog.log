@@ -1,0 +1,173 @@
+Host command: /cds/2013/INCISIV121/tools/verilog/bin/verilog.exe
+Command arguments:
+    spi_miso.v
+    spi_miso_test.v
+
+Tool:	VERILOG-XL	08.20.001-d log file created Jun 21, 2016  18:23:43
+Tool:	VERILOG-XL	08.20.001-d   Jun 21, 2016  18:23:43
+
+Copyright (c) 1995-2004 Cadence Design Systems, Inc.  All Rights Reserved.
+Unpublished -- rights reserved under the copyright laws of the United States.
+
+Copyright (c) 1995-2004 UNIX Systems Laboratories, Inc.  Reproduced with Permission.
+
+THIS SOFTWARE AND ON-LINE DOCUMENTATION CONTAIN CONFIDENTIAL INFORMATION
+AND TRADE SECRETS OF CADENCE DESIGN SYSTEMS, INC.  USE, DISCLOSURE, OR
+REPRODUCTION IS PROHIBITED WITHOUT THE PRIOR EXPRESS WRITTEN PERMISSION OF
+CADENCE DESIGN SYSTEMS, INC.
+RESTRICTED RIGHTS LEGEND
+
+Use, duplication, or disclosure by the Government is subject to
+restrictions as set forth in subparagraph (c)(1)(ii) of the Rights in
+Technical Data and Computer Software clause at DFARS 252.227-7013 or
+subparagraphs (c)(1) and (2) of Commercial Computer Software -- Restricted
+Rights at 48 CFR 52.227-19, as applicable.
+
+                Cadence Design Systems, Inc.
+                555 River Oaks Parkway
+                San Jose, California  95134
+
+For technical assistance please contact the Cadence Response Center at
+1-877-CDS-4911 or send email to support@cadence.com
+
+For more information on Cadence's Verilog-XL product line send email to
+talkv@cadence.com
+
+Compiling source file "spi_miso.v"
+Compiling source file "spi_miso_test.v"
+Highest level modules:
+spi_miso_test
+
+at time 50 spi_clk = 1   spi_cs= 1  data_av=0 read_req=1 spi_miso_in=x spi_miso_out=  x spi_mosi_out=x 
+at time 100 spi_clk = 0   spi_cs= 1  data_av=0 read_req=0 spi_miso_in=1 spi_miso_out=  x spi_mosi_out=1 
+at time 150 spi_clk = 1   spi_cs= 0  data_av=0 read_req=0 spi_miso_in=1 spi_miso_out=  x spi_mosi_out=1 
+at time 150 data=xxxxxxxx  
+at time 150 point=0  
+at time 200 spi_clk = 0   spi_cs= 0  data_av=0 read_req=0 spi_miso_in=0 spi_miso_out=  x spi_mosi_out=1 
+at time 250 spi_clk = 1   spi_cs= 0  data_av=0 read_req=0 spi_miso_in=0 spi_miso_out=  x spi_mosi_out=1 
+at time 250 data=xxxxxxx1  
+at time 250 point=1  
+at time 300 spi_clk = 0   spi_cs= 0  data_av=0 read_req=0 spi_miso_in=1 spi_miso_out=  x spi_mosi_out=1 
+at time 350 spi_clk = 1   spi_cs= 0  data_av=0 read_req=0 spi_miso_in=1 spi_miso_out=  x spi_mosi_out=1 
+at time 350 data=xxxxxx01  
+at time 350 point=2  
+at time 400 spi_clk = 0   spi_cs= 0  data_av=0 read_req=0 spi_miso_in=0 spi_miso_out=  x spi_mosi_out=1 
+at time 450 spi_clk = 1   spi_cs= 0  data_av=0 read_req=0 spi_miso_in=0 spi_miso_out=  x spi_mosi_out=1 
+at time 450 data=xxxxx101  
+at time 450 point=3  
+at time 500 spi_clk = 0   spi_cs= 0  data_av=0 read_req=0 spi_miso_in=1 spi_miso_out=  x spi_mosi_out=1 
+at time 550 spi_clk = 1   spi_cs= 0  data_av=0 read_req=0 spi_miso_in=1 spi_miso_out=  x spi_mosi_out=1 
+at time 550 data=xxxx0101  
+at time 550 point=4  
+at time 600 spi_clk = 0   spi_cs= 0  data_av=0 read_req=0 spi_miso_in=0 spi_miso_out=  x spi_mosi_out=1 
+at time 650 spi_clk = 1   spi_cs= 0  data_av=0 read_req=0 spi_miso_in=0 spi_miso_out=  x spi_mosi_out=1 
+at time 650 data=xxx10101  
+at time 650 point=5  
+at time 700 spi_clk = 0   spi_cs= 0  data_av=0 read_req=0 spi_miso_in=1 spi_miso_out=  x spi_mosi_out=1 
+at time 750 spi_clk = 1   spi_cs= 0  data_av=0 read_req=0 spi_miso_in=1 spi_miso_out=  x spi_mosi_out=1 
+at time 750 data=xx010101  
+at time 750 point=6  
+at time 800 spi_clk = 0   spi_cs= 0  data_av=0 read_req=0 spi_miso_in=0 spi_miso_out=  x spi_mosi_out=1 
+at time 850 spi_clk = 1   spi_cs= 0  data_av=0 read_req=0 spi_miso_in=0 spi_miso_out=  x spi_mosi_out=1 
+at time 850 data=x1010101  
+at time 850 point=7  
+at time 900 spi_clk = 0   spi_cs= 0  data_av=0 read_req=0 spi_miso_in=1 spi_miso_out=  x spi_mosi_out=1 
+at time 950 spi_clk = 1   spi_cs= 0  data_av=0 read_req=0 spi_miso_in=1 spi_miso_out=  x spi_mosi_out=1 
+at time 950 data=01010101  
+at time 950 point=0  
+at time 1000 spi_clk = 0   spi_cs= 0  data_av=0 read_req=0 spi_miso_in=1 spi_miso_out= 85 spi_mosi_out=1 
+at time 1050 spi_clk = 1   spi_cs= 0  data_av=0 read_req=0 spi_miso_in=1 spi_miso_out= 85 spi_mosi_out=1 
+at time 1050 data=01010101  
+at time 1050 point=1  
+at time 1100 spi_clk = 0   spi_cs= 0  data_av=0 read_req=0 spi_miso_in=1 spi_miso_out= 85 spi_mosi_out=1 
+at time 1150 spi_clk = 1   spi_cs= 0  data_av=0 read_req=0 spi_miso_in=1 spi_miso_out= 85 spi_mosi_out=1 
+at time 1150 data=01010111  
+at time 1150 point=2  
+at time 1200 spi_clk = 0   spi_cs= 0  data_av=0 read_req=0 spi_miso_in=0 spi_miso_out= 85 spi_mosi_out=1 
+at time 1250 spi_clk = 1   spi_cs= 0  data_av=0 read_req=0 spi_miso_in=0 spi_miso_out= 85 spi_mosi_out=1 
+at time 1250 data=01010111  
+at time 1250 point=3  
+at time 1300 spi_clk = 0   spi_cs= 0  data_av=0 read_req=0 spi_miso_in=0 spi_miso_out= 85 spi_mosi_out=1 
+at time 1350 spi_clk = 1   spi_cs= 0  data_av=0 read_req=0 spi_miso_in=0 spi_miso_out= 85 spi_mosi_out=1 
+at time 1350 data=01010111  
+at time 1350 point=4  
+at time 1400 spi_clk = 0   spi_cs= 0  data_av=0 read_req=0 spi_miso_in=0 spi_miso_out= 85 spi_mosi_out=1 
+at time 1450 spi_clk = 1   spi_cs= 0  data_av=0 read_req=0 spi_miso_in=0 spi_miso_out= 85 spi_mosi_out=1 
+at time 1450 data=01000111  
+at time 1450 point=5  
+at time 1500 spi_clk = 0   spi_cs= 0  data_av=0 read_req=0 spi_miso_in=0 spi_miso_out= 85 spi_mosi_out=1 
+at time 1550 spi_clk = 1   spi_cs= 0  data_av=0 read_req=0 spi_miso_in=0 spi_miso_out= 85 spi_mosi_out=1 
+at time 1550 data=01000111  
+at time 1550 point=6  
+at time 1600 spi_clk = 0   spi_cs= 0  data_av=0 read_req=0 spi_miso_in=1 spi_miso_out= 85 spi_mosi_out=1 
+at time 1650 spi_clk = 1   spi_cs= 0  data_av=0 read_req=0 spi_miso_in=1 spi_miso_out= 85 spi_mosi_out=1 
+at time 1650 data=00000111  
+at time 1650 point=7  
+at time 1700 spi_clk = 0   spi_cs= 0  data_av=0 read_req=0 spi_miso_in=1 spi_miso_out= 85 spi_mosi_out=1 
+at time 1750 spi_clk = 1   spi_cs= 0  data_av=0 read_req=0 spi_miso_in=1 spi_miso_out= 85 spi_mosi_out=1 
+at time 1750 data=10000111  
+at time 1750 point=0  
+at time 1800 spi_clk = 0   spi_cs= 0  data_av=0 read_req=0 spi_miso_in=1 spi_miso_out=135 spi_mosi_out=1 
+at time 1850 spi_clk = 1   spi_cs= 0  data_av=0 read_req=0 spi_miso_in=1 spi_miso_out=135 spi_mosi_out=1 
+at time 1850 data=10000111  
+at time 1850 point=1  
+at time 1900 spi_clk = 0   spi_cs= 0  data_av=0 read_req=0 spi_miso_in=1 spi_miso_out=135 spi_mosi_out=1 
+at time 1950 spi_clk = 1   spi_cs= 0  data_av=0 read_req=0 spi_miso_in=1 spi_miso_out=135 spi_mosi_out=1 
+at time 1950 data=10000111  
+at time 1950 point=2  
+at time 2000 spi_clk = 0   spi_cs= 0  data_av=0 read_req=0 spi_miso_in=1 spi_miso_out=135 spi_mosi_out=1 
+at time 2050 spi_clk = 1   spi_cs= 0  data_av=0 read_req=0 spi_miso_in=1 spi_miso_out=135 spi_mosi_out=1 
+at time 2050 data=10000111  
+at time 2050 point=3  
+at time 2100 spi_clk = 0   spi_cs= 0  data_av=0 read_req=0 spi_miso_in=1 spi_miso_out=135 spi_mosi_out=1 
+at time 2150 spi_clk = 1   spi_cs= 0  data_av=0 read_req=0 spi_miso_in=1 spi_miso_out=135 spi_mosi_out=1 
+at time 2150 data=10001111  
+at time 2150 point=4  
+at time 2200 spi_clk = 0   spi_cs= 0  data_av=0 read_req=0 spi_miso_in=1 spi_miso_out=135 spi_mosi_out=1 
+at time 2250 spi_clk = 1   spi_cs= 0  data_av=0 read_req=0 spi_miso_in=1 spi_miso_out=135 spi_mosi_out=1 
+at time 2250 data=10011111  
+at time 2250 point=5  
+at time 2300 spi_clk = 0   spi_cs= 0  data_av=0 read_req=0 spi_miso_in=1 spi_miso_out=135 spi_mosi_out=1 
+at time 2350 spi_clk = 1   spi_cs= 0  data_av=0 read_req=0 spi_miso_in=1 spi_miso_out=135 spi_mosi_out=1 
+at time 2350 data=10111111  
+at time 2350 point=6  
+at time 2400 spi_clk = 0   spi_cs= 0  data_av=0 read_req=0 spi_miso_in=1 spi_miso_out=135 spi_mosi_out=1 
+at time 2450 spi_clk = 1   spi_cs= 0  data_av=0 read_req=0 spi_miso_in=1 spi_miso_out=135 spi_mosi_out=1 
+at time 2450 data=11111111  
+at time 2450 point=7  
+at time 2500 spi_clk = 0   spi_cs= 0  data_av=0 read_req=0 spi_miso_in=1 spi_miso_out=135 spi_mosi_out=1 
+at time 2550 spi_clk = 1   spi_cs= 0  data_av=0 read_req=0 spi_miso_in=1 spi_miso_out=135 spi_mosi_out=1 
+at time 2550 data=11111111  
+at time 2550 point=0  
+at time 2600 spi_clk = 0   spi_cs= 0  data_av=0 read_req=0 spi_miso_in=1 spi_miso_out=255 spi_mosi_out=1 
+at time 2650 spi_clk = 1   spi_cs= 0  data_av=0 read_req=0 spi_miso_in=1 spi_miso_out=255 spi_mosi_out=1 
+at time 2650 data=11111111  
+at time 2650 point=1  
+at time 2700 spi_clk = 0   spi_cs= 0  data_av=0 read_req=0 spi_miso_in=1 spi_miso_out=255 spi_mosi_out=1 
+at time 2750 spi_clk = 1   spi_cs= 0  data_av=0 read_req=0 spi_miso_in=1 spi_miso_out=255 spi_mosi_out=1 
+at time 2750 data=11111111  
+at time 2750 point=2  
+at time 2800 spi_clk = 0   spi_cs= 0  data_av=0 read_req=0 spi_miso_in=1 spi_miso_out=255 spi_mosi_out=1 
+at time 2850 spi_clk = 1   spi_cs= 0  data_av=0 read_req=0 spi_miso_in=1 spi_miso_out=255 spi_mosi_out=1 
+at time 2850 data=11111111  
+at time 2850 point=3  
+at time 2900 spi_clk = 0   spi_cs= 0  data_av=0 read_req=0 spi_miso_in=1 spi_miso_out=255 spi_mosi_out=1 
+at time 2950 spi_clk = 1   spi_cs= 0  data_av=0 read_req=0 spi_miso_in=1 spi_miso_out=255 spi_mosi_out=1 
+at time 2950 data=11111111  
+at time 2950 point=4  
+at time 3000 spi_clk = 0   spi_cs= 0  data_av=0 read_req=0 spi_miso_in=1 spi_miso_out=255 spi_mosi_out=1 
+at time 3050 spi_clk = 1   spi_cs= 0  data_av=0 read_req=0 spi_miso_in=1 spi_miso_out=255 spi_mosi_out=1 
+at time 3050 data=11111111  
+at time 3050 point=5  
+at time 3100 spi_clk = 0   spi_cs= 0  data_av=0 read_req=0 spi_miso_in=1 spi_miso_out=255 spi_mosi_out=1 
+at time 3150 spi_clk = 1   spi_cs= 0  data_av=0 read_req=0 spi_miso_in=1 spi_miso_out=255 spi_mosi_out=1 
+at time 3150 data=11111111  
+at time 3150 point=6  
+at time 3200 spi_clk = 0   spi_cs= 0  data_av=0 read_req=0 spi_miso_in=1 spi_miso_out=255 spi_mosi_out=1 
+at time 3250 spi_clk = 1   spi_cs= 0  data_av=0 read_req=0 spi_miso_in=1 spi_miso_out=255 spi_mosi_out=1 
+at time 3250 data=11111111  
+at time 3250 point=7  
+L85 "spi_miso_test.v": $finish at simulation time 3300000
+0 simulation events (use +profile or +listcounts option to count)
+CPU time: 0.0 secs to compile + 0.0 secs to link + 0.0 secs in simulation
+End of Tool:	VERILOG-XL	08.20.001-d   Jun 21, 2016  18:23:44

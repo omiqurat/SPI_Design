@@ -1,0 +1,116 @@
+`timescale 1 ns / 1 ps
+module spi_mosi (control_clk,spi_mosi_out,spi_cs,spi_clk,,n_reset,spi_mosi_in);
+
+  parameter DSIZE = 8;
+
+
+    output  spi_mosi_out,control_clk;
+    input spi_cs;
+    input n_reset;
+    input  spi_clk;
+	input [DSIZE-1:0] spi_mosi_in;
+    reg control_clk;
+
+	reg spi_mosi_out;
+    
+	reg[2:0] point;
+      reg[7:0] data ;
+ 
+      reg [2:0] control ;	
+
+
+     
+
+	always@(posedge spi_cs)
+            begin
+              
+              
+                control<=3'b010;
+               control_clk<=0;
+               spi_mosi_out<=0;
+                            
+               data<=8'd0;
+            
+		end
+
+
+// control clock : control smooth transiction of Data from asy_fifo_to spi_mosi
+	
+
+always@(posedge spi_clk)
+
+
+        begin
+           if(control==3'd3)
+               begin
+   				control_clk<=~control_clk;
+   				control<=0;
+   
+					end
+			else
+				begin
+					control=control+1;
+				end
+        end
+// data from asy fifo come to spi_mosi with the control clock
+
+always@(posedge control_clk)
+       begin
+           if(data==0 ) 
+               begin
+               
+                 data<=8'd0;  // address
+                 
+            
+               
+                    	end
+
+	  else 
+         	begin
+ 		data<=spi_mosi_in;
+                point<=3'b000;
+              			end  
+		end
+
+
+
+// spi clk manage data to send slave bit by bit
+	
+always@(posedge spi_clk)
+    begin
+ 		if(spi_cs ) 
+             begin
+        		   spi_mosi_out<=0;
+                             
+                              data<=8'd100;
+            
+               
+             end
+
+	  else if(!spi_cs)
+			    begin
+          if(point==3'b111)	
+                begin
+                   point<=3'b000;
+                   
+                   end
+	              else
+                     begin
+                      spi_mosi_out<=data[point];
+                     point<= point+1;	
+                    end
+		    	end
+          $display ("at time %0d point=%d  ", $time, point);
+           $display ("at time %0d data=%b  ", $time, data);
+
+
+	
+		end
+
+
+   
+
+
+		endmodule
+
+			
